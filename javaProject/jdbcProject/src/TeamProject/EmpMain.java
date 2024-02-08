@@ -58,11 +58,7 @@ public class EmpMain extends JFrame implements ActionListener{
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 
-<<<<<<< HEAD
-		String sql = "select * from empt order by emp_id";
-=======
 		String sql = "select * from emp order by emp_id";
->>>>>>> 717a9e3db25d37c5e102c9c0828bd2a094579ba7
 		conn = db.getOracle();
 
 		try {
@@ -110,11 +106,7 @@ public class EmpMain extends JFrame implements ActionListener{
 		String phone = addForm.tfPhone.getText();
 		String image = addForm.imageName;
 
-<<<<<<< HEAD
-		String sql = "insert into empt values(seq_empt.nextval,?,?,?,?,?,?,?,?,?)";
-=======
 		String sql = "insert into emp values(seq_empt.nextval,?,?,?,?,?,?,?,?,?)";
->>>>>>> 717a9e3db25d37c5e102c9c0828bd2a094579ba7
 
 		Connection conn = db.getOracle();
 		PreparedStatement pstmt = null;
@@ -145,11 +137,8 @@ public class EmpMain extends JFrame implements ActionListener{
 
 	//delete메서드
 	public void deleteData(String num) {
-<<<<<<< HEAD
-		String sql = "delete from empt where emp_id ="+num;
-=======
+
 		String sql = "delete from emp where emp_id ="+num;
->>>>>>> 717a9e3db25d37c5e102c9c0828bd2a094579ba7
 
 		Connection conn = db.getOracle();
 		PreparedStatement pstmt = null;
@@ -191,11 +180,7 @@ public class EmpMain extends JFrame implements ActionListener{
 		String image = addForm.imageName;
 		//String image = updateForm.imageName;
 
-<<<<<<< HEAD
-		String sql = "update empt set emp_name=?, birth_date=?, hire_date=?, dept_id=?, position=?, salary=?, email=?, phone_number=? where emp_id=?";
-=======
 		String sql = "update emp set emp_name=?, birth_date=?, hire_date=?, dept_id=?, position=?, salary=?, email=?, phone_number=? where emp_id=?";
->>>>>>> 717a9e3db25d37c5e102c9c0828bd2a094579ba7
 
 		Connection conn = db.getOracle();
 		PreparedStatement pstmt = null;
@@ -237,12 +222,7 @@ public class EmpMain extends JFrame implements ActionListener{
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 
-<<<<<<< HEAD
-		String sql = "select * from empt where emp_name like '%" + name + "%'";
-=======
 		String sql = "select * from emp where emp_name like '%" + name + "%'";
->>>>>>> 717a9e3db25d37c5e102c9c0828bd2a094579ba7
-
 
 		try {
 			pstmt = conn.prepareStatement(sql);
@@ -361,11 +341,8 @@ public class EmpMain extends JFrame implements ActionListener{
 		}else if(ob == btnUpdate) {
 
 			String num = JOptionPane.showInputDialog("수정할 시퀀스는?");
-<<<<<<< HEAD
-			String sql = "select * from empt where emp_id = "+num;
-=======
+
 			String sql = "select * from emp where emp_id = "+num;
->>>>>>> 717a9e3db25d37c5e102c9c0828bd2a094579ba7
 
 			Connection conn = db.getOracle();
 			PreparedStatement pstmt = null;

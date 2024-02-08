@@ -139,11 +139,6 @@ public class EmpUpdate extends JFrame implements ActionListener {
 		//이미지 추가
 		photoDraw.setBounds(170,10,300,400);
 		this.add(photoDraw);
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 717a9e3db25d37c5e102c9c0828bd2a094579ba7
 	}
 	
 	class PhotoDraw extends Canvas{
@@ -181,10 +176,6 @@ public class EmpUpdate extends JFrame implements ActionListener {
 
 			//this.setPhoto(imageName);
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 717a9e3db25d37c5e102c9c0828bd2a094579ba7
 			//이미지 출력
 			photoDraw.repaint();
 

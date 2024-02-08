@@ -18,11 +18,8 @@ public class DbConnect {
 		Connection conn=null;
 		
 		try {
-<<<<<<< HEAD
 			conn=DriverManager.getConnection(ORACLE_DB, "junbro", "a1234");
-=======
-			conn=DriverManager.getConnection(ORACLE_DB, "faker", "a1234");
->>>>>>> 717a9e3db25d37c5e102c9c0828bd2a094579ba7
+			//conn=DriverManager.getConnection(ORACLE_DB, "faker", "a1234");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			System.out.println("로칼 오라클 연결실패!!");

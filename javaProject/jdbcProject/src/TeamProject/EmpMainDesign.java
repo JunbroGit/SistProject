@@ -90,11 +90,7 @@ public class EmpMainDesign extends JFrame implements ActionListener{
 		Object ob=e.getSource();
 		
 		if(ob==connbtn) {
-<<<<<<< HEAD
-			EmpMain add=new EmpMain("");
-=======
 			EmpMain add=new EmpMain("인사관리 시스템");
->>>>>>> 717a9e3db25d37c5e102c9c0828bd2a094579ba7
 			main.setVisible(true);
 			this.setVisible(false);
 		}
