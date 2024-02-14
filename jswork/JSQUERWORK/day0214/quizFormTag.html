@@ -42,8 +42,8 @@
 
                 //입력한 혈액형 추가
                 var bloodTypes=document.getElementsByName("blood");
-                for (var i=0;i<bloodTypes.length;i++) {
-                    if (bloodTypes[i].checked) {
+                for(var i=0;i<bloodTypes.length;i++){
+                    if(bloodTypes[i].checked){
                         s+="혈액형: "+bloodTypes[i].value+"<br>";
                         break;
                     }
@@ -52,8 +52,8 @@
                 //입력한 가능언어 추가
                 var languages=document.getElementsByName("lang");
                 s+="가능언어: ";
-                for (var i=0;i<languages.length;i++) {
-                    if (languages[i].checked) {
+                for(var i=0;i<languages.length;i++){
+                    if(languages[i].checked){
                         s+=languages[i].value+" ";
                     }
                 }
