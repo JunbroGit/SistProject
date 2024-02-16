@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #photo_zon{
+            position: absolute;
+            left: 50px;
+            top: 100px;
+            width: 380px;
+            height: 550px;
+            border: 2px solid gray;
+            padding: 10px 10px;
+        }
+        #main_zon{
+            position: absolute;
+            left: 500px;
+            top: 100px;
+        }
+        #large_photo{
+            width: 400px;
+            height: 500px;
+            border: 10px groove forestgreen;
+        }
+        .sphoto{
+            width: 60px;
+            height: 60px;
+            border: 1px solid gray;
+            margin: 5px 5px;
+            cursor: pointer;    
+        }
+    </style>
+</head>
+<body>
+    <div id="photo_zon">
+        <script>
+            for(var i=1;i<=35;i++){
+                if(i==23) continue;
+                document.write("<img src='../image/쇼핑몰이미지/"+i+".jpg' class='sphoto'>");
+            }
+        </script>
+    </div>
+    <div id="main_zon">
+        <img src="../image/허허/토토로8.gif" id="large_photo">
+    </div>
+
+    <script>
+        
+    </script>
+</body>
+</html>
