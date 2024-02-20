@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        $(function(){
+
+            var imgArr=new Array(5);
+            imgArr[0]="../image/허허/토토로1.gif";
+            imgArr[1]="../image/허허/토토로2.gif";
+            imgArr[2]="../image/허허/토토로3.gif";
+            imgArr[3]="../image/허허/토토로4.gif";
+            imgArr[4]="../image/허허/토토로5.gif";
+
+            //모든 이미지에 같은 이미지를 넣고 width,height,border설정
+            $("img").attr("src","../image/허허/토토로6.gif").css({
+                "width":"200px",
+                "border":"2px solid foresrgreen"
+            })
+
+            //img태그에 마우수를 올리면 5개중 한개가 랜덤으로 나옴
+            $("img").mouseover(function(){
+
+                //현재이미지 얻기
+                currImg=$(this).attr
+            })
+
+            //마우스를 벗아나면 다시 원래의 이미지
+            $("img").mouseout(function(){
+                $(this).attr("src","../image/허허/토토로6.gif");
+            });
+
+        })
+    </script>
+</head>
+<body>
+    <img src="">
+    <img src="">
+    <img src="">
+    <img src="">
+    <img src="">
+</body>
+</html>
