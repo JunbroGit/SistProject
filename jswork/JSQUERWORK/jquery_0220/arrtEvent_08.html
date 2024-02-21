@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Gaegu&family=Nanum+Myeongjo&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <title>Document</title>
     <script>
         $(function(){
@@ -24,15 +27,19 @@
             $("img").mouseover(function(){
 
                 //현재이미지 얻기
-                currImg=$(this).attr
-            })
+                currImg=$(this).attr("src");
 
-            //마우스를 벗아나면 다시 원래의 이미지
-            $("img").mouseout(function(){
-                $(this).attr("src","../image/허허/토토로6.gif");
+                //랜덤0~4
+                var ranIdx=parseInt(Math.random()*5);
+
+                $(this).attr("src",imgArr[ranIdx]);
             });
 
-        })
+            //마우스벗어나면 다시 원래의 이미지
+            $("img").mouseout(function(){
+                $(this).attr("src",currImg);
+            })
+        });
     </script>
 </head>
 <body>
