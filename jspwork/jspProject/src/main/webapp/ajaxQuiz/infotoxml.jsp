@@ -5,41 +5,40 @@
 <%@page import="mysql.db.DbConnect"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<data>
 <%
 	DbConnect db=new DbConnect();
 	Connection conn=db.getConnection();
 	PreparedStatement pstmt=null;
 	ResultSet rs=null;
 	
-	String sql="select * from student order by num";
-	
-	String s="[";
+	String sql="select * from info order by num";
 	
 	try{
 		pstmt=conn.prepareStatement(sql);
 		rs=pstmt.executeQuery();
 		
 		while(rs.next()){
-			int num=rs.getInt("num");
-			String name=rs.getString("name");
-			String photo=rs.getString("photo");
-			int java=rs.getInt("java");
-			int spring=rs.getInt("spring");
-			
-			s+="{";
-			s+="\"num\":"+num+",\"name\":\""+name+"\",\"photo\":\""+photo+"\",\"java\":"+java+",\"spring\":\""+spring+"\"";
-			s+="},";
-		}
 		
-		s=s.substring(0, s.length()-1);
-	
+			String num=rs.getString("num");
+			String name=rs.getString("name");
+			String hp=rs.getString("hp");
+			String age=rs.getString("age");
+			String photo=rs.getString("photo");
+			%>
+			
+			<info num="<%=num %>">
+				<name><%=name %></name>
+				<hp><%=hp %></hp>
+				<age><%=age %></age>
+				<photo><%=photo %></photo>
+			</info>
+	<%}		
+		
 	}catch(SQLException e){
 		
 	}finally{
 		db.dbClose(rs, pstmt, conn);
 	}
-	
-	s+="]";
 %>
-
-<%=s%>
+</data>

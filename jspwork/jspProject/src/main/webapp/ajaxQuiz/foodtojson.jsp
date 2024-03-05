@@ -11,7 +11,7 @@
 	PreparedStatement pstmt=null;
 	ResultSet rs=null;
 	
-	String sql="select * from student order by num";
+	String sql="select * from food order by num";
 	
 	String s="[";
 	
@@ -20,19 +20,21 @@
 		rs=pstmt.executeQuery();
 		
 		while(rs.next()){
-			int num=rs.getInt("num");
-			String name=rs.getString("name");
-			String photo=rs.getString("photo");
-			int java=rs.getInt("java");
-			int spring=rs.getInt("spring");
+			String num=rs.getString("num");
+			String foodname=rs.getString("foodname");
+			String foodphoto=rs.getString("foodphoto");
+			String price=rs.getString("price");
+			String cnt=rs.getString("cnt");
 			
 			s+="{";
-			s+="\"num\":"+num+",\"name\":\""+name+"\",\"photo\":\""+photo+"\",\"java\":"+java+",\"spring\":\""+spring+"\"";
+			s+="\"num\":"+num+",\"foodname\":\""+foodname+"\",\"foodphoto\":\""+foodphoto+"\",\"price\":"+price+",\"cnt\":\""+cnt+"\"";
 			s+="},";
 		}
 		
-		s=s.substring(0, s.length()-1);
-	
+		if (s.endsWith(",")) {
+            s = s.substring(0, s.length() - 1);
+        }
+		
 	}catch(SQLException e){
 		
 	}finally{
