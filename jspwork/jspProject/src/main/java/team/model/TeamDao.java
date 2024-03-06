@@ -1,33 +1,35 @@
-package info.model;
+package team.model;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Vector;
+import java.util.ArrayList;
 
-import oracle.db.DbConnect;
+import mysql.db.DbConnect;
 
-public class InfoDao {
+public class TeamDao {
 
 	DbConnect db=new DbConnect();
 	
-	public void infoInsert(InfoDto dto) {
+	//insert
+	public void insertTeam(TeamDto dto) {
 		
 		Connection conn=db.getConnection();
 		PreparedStatement pstmt=null;
 		
-		String sql="insert into info values(seq_1.nextval,?,?,sysdate)";
+		String sql="insert into team(name,driver,addr,writeday) values(?,?,?,now())";
 		
 		try {
 			pstmt=conn.prepareStatement(sql);
-			
-			//?바인딩
+			//바인딩 3개
 			pstmt.setString(1, dto.getName());
-			pstmt.setString(2, dto.getAddr());
+			pstmt.setString(2, dto.getDriver());
+			pstmt.setString(3, dto.getAddr());
 			
-			//업데이트
+			//실행
 			pstmt.execute();
+			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -36,32 +38,32 @@ public class InfoDao {
 		}
 	}
 	
-	//전체데이터 조회
-	public Vector<InfoDto> getAllDatas(){
-		 
-		Vector<InfoDto> list=new Vector<InfoDto>();
+	//전체출력
+	public ArrayList<TeamDto> getAllTeams(){
+		
+		ArrayList<TeamDto> list=new ArrayList<TeamDto>();
 		
 		Connection conn=db.getConnection();
 		PreparedStatement pstmt=null;
 		ResultSet rs=null;
 		
-		String sql="select * from info order by num";
+		String sql="select * from team order by num";
 		
 		try {
 			pstmt=conn.prepareStatement(sql);
 			rs=pstmt.executeQuery();
 			
-			//여러개의 데이타 얻을땐 while
 			while(rs.next()) {
 				
-				InfoDto dto=new InfoDto();
+				TeamDto dto=new TeamDto();
 				
 				dto.setNum(rs.getString("num"));
 				dto.setName(rs.getString("name"));
+				dto.setDriver(rs.getString("driver"));
 				dto.setAddr(rs.getString("addr"));
-				dto.setSdate(rs.getTimestamp("sdate"));
+				dto.setWriteday(rs.getTimestamp("writeday"));
 				
-				//벡터에 추가
+				//list에 추가
 				list.add(dto);
 			}
 		} catch (SQLException e) {
@@ -75,20 +77,18 @@ public class InfoDao {
 	}
 	
 	//삭제
-	public void infoDelte(String num) {
+	public void deleteTeam(String num) {
 		
 		Connection conn=db.getConnection();
 		PreparedStatement pstmt=null;
 		
-		String sql="delete from info where num=?";
+		String sql="delete from team where num=?";
 		
 		try {
 			pstmt=conn.prepareStatement(sql);
 			
-			//바인딩
 			pstmt.setString(1, num);
 			
-			//업데이트
 			pstmt.execute();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -98,28 +98,31 @@ public class InfoDao {
 		}
 	}
 	
-	//수정버튼 누르면 하나의 데이터 조회
-	public InfoDto getData(String num) {
+	//하나의 dto조회
+	public TeamDto getOneData(String num) {
 		
-		InfoDto dto=new InfoDto();
+		TeamDto dto=new TeamDto();
 		
 		Connection conn=db.getConnection();
 		PreparedStatement pstmt=null;
 		ResultSet rs=null;
 		
-		String sql="select * from info where num=?";
+		String sql="select * from team where num=?";
 		
 		try {
 			pstmt=conn.prepareStatement(sql);
+			
 			pstmt.setString(1, num);
+			
 			rs=pstmt.executeQuery();
 			
-			//수정하려는 1개의 데이터 조회
 			if(rs.next()) {
 				
 				dto.setNum(rs.getString("num"));
 				dto.setName(rs.getString("name"));
+				dto.setDriver(rs.getString("driver"));
 				dto.setAddr(rs.getString("addr"));
+				dto.setWriteday(rs.getTimestamp("writeday"));
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -131,20 +134,21 @@ public class InfoDao {
 		return dto;
 	}
 	
-	//수정..이름,주소수정 가능하게
-	public void infoUpdate(InfoDto dto) {
+	//update
+	public void updateteam(TeamDto dto) {
 		
 		Connection conn=db.getConnection();
 		PreparedStatement pstmt=null;
 		
-		String sql="update info set name=?,addr=? where num=?";
+		String sql="update team set name=?,driver=?,addr=? where num=?";
 		
 		try {
 			pstmt=conn.prepareStatement(sql);
 			
 			pstmt.setString(1, dto.getName());
-			pstmt.setString(2, dto.getAddr());
-			pstmt.setString(3, dto.getNum());
+			pstmt.setString(2, dto.getDriver());
+			pstmt.setString(3, dto.getAddr());
+			pstmt.setString(4, dto.getNum());
 			
 			pstmt.execute();
 		} catch (SQLException e) {
