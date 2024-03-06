@@ -20,6 +20,22 @@
 <jsp:setProperty property="*" name="dto"/>
 
 <%
+	String[] hobbies=request.getParameterValues("hobby");
+	if (hobbies!=null) {
+	    StringBuilder hobbyStr=new StringBuilder();
+	    
+	    for (String hobby : hobbies) {
+	        hobbyStr.append(hobby).append(",");
+	    }
+	    
+	    hobbyStr.delete(hobbyStr.length()-1, hobbyStr.length());
+	    
+	    dto.setHobby(hobbyStr.toString());
+	    
+	}else{
+	    dto.setHobby("난 취미가 없어유");
+	}
+
 	dao.insertIntro(dto);
 	
 	response.sendRedirect("introList.jsp");

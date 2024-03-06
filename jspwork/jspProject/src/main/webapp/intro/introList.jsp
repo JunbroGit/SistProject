@@ -26,11 +26,11 @@
 		<tr class="table-primary">
 			<th width="60">번호</th>
 			<th width="120">이름</th>
-			<th width="120">나이</th>
-			<th width="150">생일</th>
-			<th width="120">주거지역</th>
-			<th width="120">취미</th>
-			<th width="200">성격</th>	
+			<th width="60">나이</th>
+			<th width="120">생일</th>
+			<th width="100">주거지역</th>
+			<th width="150">취미</th>
+			<th width="250">성격</th>	
 		</tr>
 		
 		<%
