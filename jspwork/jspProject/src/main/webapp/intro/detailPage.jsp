@@ -47,8 +47,8 @@
 		</tr>
 		<tr>
 			<th>취미</th>
-			<td><%=dto.getHobby().equals("no")?"취미가 없어유":dto.getHobby() %></td>
-		</tr>
+			<td><%=(dto.getHobby()==null||dto.getHobby().equals("no"))?"취미가 없어유":dto.getHobby() %></td>
+		</tr>	
 		<tr>
 			<th>더 하고싶은 말</th>
 			<td><%=dto.getMemo() %></td>

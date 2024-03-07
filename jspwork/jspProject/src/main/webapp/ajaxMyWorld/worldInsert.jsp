@@ -23,6 +23,7 @@ WorldDao dao=new WorldDao();
 	String avata=request.getParameter("avata");
 	
 	WorldDto dto=new WorldDto();
+	
 	dto.setWriter(writer);
 	dto.setContent(content);
 	dto.setAvata(avata);
