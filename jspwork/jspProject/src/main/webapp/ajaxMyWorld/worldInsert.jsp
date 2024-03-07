@@ -1,3 +1,5 @@
+<%@page import="myworld.model.WorldDto"%>
+<%@page import="myworld.model.WorldDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -11,34 +13,21 @@
 </head>
 <body>
 <%
+WorldDao dao=new WorldDao();
+
 	request.setCharacterEncoding("utf-8");
-%>
-
-<jsp:useBean id="dao" class="intro.model.introDao"/>
-<jsp:useBean id="dto" class="intro.model.introDto"/>
-
-<jsp:setProperty property="*" name="dto"/>
-
-<%
-	String[] hobby=request.getParameterValues("hobby");
-
-	String myhobby="";
-
-	if(hobby==null)
-		myhobby="no";
-	else{
-		for(int i=0;i<hobby.length;i++){
-			myhobby+=hobby[i]+",";
-		}
-		
-		myhobby=myhobby.substring(0,myhobby.length()-1);
-	}
 	
-	dto.setHobby(myhobby);
-
-	dao.insertIntro(dto);
+	//데이타 읽기(Writer,content,avata)
+	String writer=request.getParameter("writer");
+	String content=request.getParameter("content");
+	String avata=request.getParameter("avata");
 	
-	response.sendRedirect("introList.jsp");
+	WorldDto dto=new WorldDto();
+	dto.setWriter(writer);
+	dto.setContent(content);
+	dto.setAvata(avata);
+	
+	dao.insertWorld(dto);
 %>
 </body>
 </html>

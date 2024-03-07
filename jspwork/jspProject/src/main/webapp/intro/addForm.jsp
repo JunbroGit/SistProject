@@ -58,7 +58,7 @@
 			</tr>
 			
 			<tr>
-				<th>성격</th>
+				<th>하고 싶은 말</th>
 				<td>
 					<textarea name="memo" style="width: 500px; height: 100px;" placeholder="자유롭게 서술하세요:)" class="form-control"></textarea>
 				</td>

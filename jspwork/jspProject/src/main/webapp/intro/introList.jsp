@@ -19,38 +19,43 @@
 %>
 <body>
 <div style="margin: 30px 50px;">
-	<button type="button" class="btn btn-success" onclick="location.href='addForm.jsp'">팀원 추가</button>
-	
-	<br>
+	<h1 class="alert alert-info" style="width: 1000px;">자기소개</h1>
 	<table class="table table-bordered" style="width: 900px;">
 		<tr class="table-primary">
 			<th width="60">번호</th>
-			<th width="120">이름</th>
+			<th width="100">이름</th>
 			<th width="60">나이</th>
-			<th width="120">생일</th>
-			<th width="100">주거지역</th>
-			<th width="150">취미</th>
-			<th width="250">성격</th>	
+			<th width="120">생년월일</th>
+			<th width="200">자세히보기</th>
 		</tr>
 		
 		<%
-			for(int i=0;i<list.size();i++)
-	     	{
-	    		introDto dto=list.get(i);
-		    	%>
-		    	 
-		    	<tr>
-		    	  <td align="center"><%=i+1 %></td>
-		    	  <td><%=dto.getName() %></td>
-		    	  <td><%=dto.getAge() %></td>
-		    	  <td><%=dto.getBirthday() %></td>
-		    	  <td><%=dto.getHometown() %></td>
-		    	  <td><%=dto.getHobby() %></td>
-		    	  <td><%=dto.getMemo() %></td>
+			if(list.size()==0){%>
+				
+				<tr>
+		    	  <td colspan="5" align="center">
+		    	  	<h3>자기소개가 없습니다</h3>
+		    	  </td>
 		    	</tr>
-		   <%}
+			<%}else{
+				for(int i=0;i<list.size();i++){
+					
+					introDto dto=list.get(i);
+					%>
+			    	 
+			    	<tr>
+			    	  <td align="center"><%=i+1 %></td>
+			    	  <td align="center"><%=dto.getName() %></td>
+			    	  <td align="center"><%=dto.getAge() %></td>
+			    	  <td align="center"><%=dto.getBirthday() %></td>
+			    	  <td align="center"><button type="button" class="btn btn-info" onclick="location.href='detailPage.jsp?num=<%=dto.getNum()%>'">자세히보기</button></td>
+			    	</tr>
+			   <%}
+				}	    	
 		%>
 	</table>
+	
+	<button type="button" class="btn btn-success" onclick="location.href='addForm.jsp'">추가</button>
 </div>
 </body>
 </html>
