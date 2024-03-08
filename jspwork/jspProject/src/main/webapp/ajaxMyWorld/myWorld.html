@@ -74,9 +74,13 @@
 		
 		//버튼 누르면 추가폼 나오고 사라지게
 		$("#btnadd").click(function(){
-			$("div.updataform").hide();
+			$("div.updateform").hide();
 			$("div.addform").slideToggle();
 		});
+		
+		$("i.edit").click(function(){
+			$("div.updataform").slideToggle();
+		})
 		
 		//아바타 이미지에 기본하나 select클래스 추가
 		$("img.avata").eq(2).addClass("select");
