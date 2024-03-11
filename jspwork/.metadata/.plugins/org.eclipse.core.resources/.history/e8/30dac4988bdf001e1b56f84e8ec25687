@@ -1,0 +1,5 @@
+package ajaxboard;
+
+public class AjaxBoardDto {
+
+}

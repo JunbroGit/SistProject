@@ -1,0 +1,157 @@
+<?xml version="1.0" ?>
+<SAVED_DATA>
+	<bookmarks>
+		<jdbcDriver className="oracle.jdbc.driver.OracleDriver" name="Oracle JDBC driver" type="ORACLE" version="23.3.0.23.09">
+			<jar fileName="C:\sist\utill\ojdbc11.jar" />
+		</jdbcDriver>
+		<jdbcDriver className="org.apache.derby.jdbc.EmbeddedDriver" name="org.apache.derby.jdbc.EmbeddedDriver" type="DERBY" version="">
+			<jar fileName="C:/Users/microsoft/.p2/pool/plugins/com.quantum.derby_3.3.10/lib/derby.jar" />
+		</jdbcDriver>
+		<jdbcDriver className="com.mysql.cj.jdbc.Driver" name="MySQL Connector/J" type="MYSQL" version="mysql-connector-j-8.3.0 (Revision: 805f872a57875f311cb82487efcfb070411a3fa0)">
+			<jar fileName="C:\sist\utill\mysql-connector-j-8.3.0.jar" />
+		</jdbcDriver>
+		<bookmark>
+			<name>(Internal) Derby</name>
+			<username>QUANTUM</username>
+			<password />
+			<prompt>false</prompt>
+			<connect>jdbc:derby:C:/Users/microsoft/.p2/pool/plugins/com.quantum.derby_3.3.10/data/quantum</connect>
+			<autoCommit>true</autoCommit>
+			<autoCommitPreference>Always True</autoCommitPreference>
+			<autoCommitIgnoreView>false</autoCommitIgnoreView>
+			<quoteAll>false</quoteAll>
+			<sendQueryAsIs>false</sendQueryAsIs>
+			<stripNewline>false</stripNewline>
+			<shutdownOnDisconnect>true</shutdownOnDisconnect>
+			<defaultEncoding />
+			<driver>org.apache.derby.jdbc.EmbeddedDriver</driver>
+			<type>DERBY</type>
+			<substituteVariables>false</substituteVariables>
+			<variablesRegexp>\$\{(.*?)\}</variablesRegexp>
+			<driverLocation>C:/Users/microsoft/.p2/pool/plugins/com.quantum.derby_3.3.10/lib/derby.jar</driverLocation>
+			<Other_Schemas schemaRule="useAll" />
+			<quickList />
+			<queryList />
+		</bookmark>
+		<bookmark>
+			<name>junbro</name>
+			<username>junbro</username>
+			<password>a1234</password>
+			<prompt>false</prompt>
+			<connect>jdbc:oracle:thin:@localhost:1521:XE</connect>
+			<autoCommit>true</autoCommit>
+			<autoCommitPreference>Always True</autoCommitPreference>
+			<autoCommitIgnoreView>false</autoCommitIgnoreView>
+			<quoteAll>false</quoteAll>
+			<sendQueryAsIs>false</sendQueryAsIs>
+			<stripNewline>false</stripNewline>
+			<shutdownOnDisconnect>false</shutdownOnDisconnect>
+			<defaultEncoding />
+			<driver>oracle.jdbc.driver.OracleDriver</driver>
+			<type>ORACLE</type>
+			<substituteVariables>false</substituteVariables>
+			<variablesRegexp>\$\{(.*?)\}</variablesRegexp>
+			<driverLocation>C:\sist\utill\ojdbc11.jar</driverLocation>
+			<Other_Schemas schemaRule="useSelected">
+				<schema>JUNBRO</schema>
+			</Other_Schemas>
+			<quickList />
+			<queryList />
+		</bookmark>
+		<bookmark>
+			<name>mysql_angel</name>
+			<username>angel</username>
+			<password>a1234</password>
+			<prompt>false</prompt>
+			<connect>jdbc:mysql://localhost:3306/coffee</connect>
+			<autoCommit>true</autoCommit>
+			<autoCommitPreference>Always True</autoCommitPreference>
+			<autoCommitIgnoreView>false</autoCommitIgnoreView>
+			<quoteAll>false</quoteAll>
+			<sendQueryAsIs>false</sendQueryAsIs>
+			<stripNewline>false</stripNewline>
+			<shutdownOnDisconnect>false</shutdownOnDisconnect>
+			<defaultEncoding />
+			<driver>com.mysql.cj.jdbc.Driver</driver>
+			<type>MYSQL</type>
+			<substituteVariables>false</substituteVariables>
+			<variablesRegexp>\$\{(.*?)\}</variablesRegexp>
+			<driverLocation>C:\sist\utill\mysql-connector-j-8.3.0.jar</driverLocation>
+			<Other_Schemas schemaRule="useSelected">
+				<schema>coffee</schema>
+			</Other_Schemas>
+			<quickList />
+			<queryList>
+				<query>
+					<queryString>create table student(num smallint auto_increment primary key,
+name varchar(20),photo varchar(30),
+java int,spring varchar(100))</queryString>
+				</query>
+				<query>
+					<queryString>insert into info(name,hp,age,photo)values('여진구','010-111-5634',22,'../image/연예인이미지/1.jpg')</queryString>
+				</query>
+				<query>
+					<queryString>insert into info(name,hp,age,photo)values('수지','010-222-5616',28,'../image/연예인이미지/19.jpg')</queryString>
+				</query>
+				<query>
+					<queryString>insert into info(name,hp,age,photo)values('신세경','010-333-8953',30,'../image/연예인이미지/18.jpg')</queryString>
+				</query>
+				<query>
+					<queryString>insert into info(name,hp,age,photo)values('유아인','010-444-2318',31,'../image/연예인이미지/20.jpg')</queryString>
+				</query>
+				<query>
+					<queryString>insert into info(name,hp,age,photo)values('성준','010-555-1348',28,'../image/연예인이미지/16.jpg')</queryString>
+				</query>
+				<query>
+					<queryString>insert into student(name,photo,java,spring)values('강동원','../image/연예인이미지/9.jpg',88,96)</queryString>
+				</query>
+				<query>
+					<queryString>insert into student(name,photo,java,spring)values('박보영','../image/연예인이미지/12.jpg',76,84)</queryString>
+				</query>
+				<query>
+					<queryString>insert into student(name,photo,java,spring)values('김태희','../image/연예인이미지/10.jpg',82,100)</queryString>
+				</query>
+				<query>
+					<queryString>insert into student(name,photo,java,spring)values('설현','../image/연예인이미지/15.jpg',90,76)</queryString>
+				</query>
+				<query>
+					<queryString>insert into student(name,photo,java,spring)values('신민아','../image/연예인이미지/17.jpg',92,88)</queryString>
+				</query>
+				<query>
+					<queryString>create table jshop(num smallint auto_increment primary key,
+sangpum varchar(20),color varchar(20),
+price int,imagename varchar(100))</queryString>
+				</query>
+				<query>
+					<queryString>insert into jshop values(null,'가디건','gray','85000','../image/쇼핑몰이미지/1.jpg')</queryString>
+				</query>
+				<query>
+					<queryString>insert into jshop values(null,'모자','brown','30000','../image/쇼핑몰이미지/29.jpg')</queryString>
+				</query>
+				<query>
+					<queryString>insert into jshop values(null,'단화','beige','125000','../image/쇼핑몰이미지/12.jpg')</queryString>
+				</query>
+				<query>
+					<queryString>insert into jshop values(null,'진주팔찌','white','105000','../image/쇼핑몰이미지/20.jpg')</queryString>
+				</query>
+				<query>
+					<queryString>insert into jshop values(null,'원피스','ivory','85000','../image/쇼핑몰이미지/28.jpg')</queryString>
+				</query>
+				<query>
+					<queryString>create table intro(num smallint auto_increment primary key,
+name varchar(20),age smallint,photo varchar(100),
+birthday varchar(20),hometown varchar(20),
+hobby varchar(100),memo varchar(100))</queryString>
+				</query>
+				<query>
+					<queryString>create table myworld(num int auto_increment primary key,
+writer varchar(20),content varchar(1000),
+avata varchar(50),writeday datetime)</queryString>
+				</query>
+				<query>
+					<queryString>insert into myworld values(null,'angel','Ajax방명록 만드는중','../image/avata/b1.png',now())</queryString>
+				</query>
+			</queryList>
+		</bookmark>
+	</bookmarks>
+</SAVED_DATA>
