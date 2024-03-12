@@ -5,6 +5,8 @@ C:\sist\work\jspwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\17943
 \jspProject\src\main\java
 C:\sist\work\jspwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1023686179.index
 \jspProject\src\main\java
+C:\sist\work\jspwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3845605775.index
+\jspAjaxProject\src\main\java
 C:\sist\work\jspwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2580058911.index
 \jspProject\src\main\java
 C:\sist\work\jspwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1704594481.index
@@ -17,6 +19,8 @@ C:\sist\work\jspwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\15665
 \jspProject\src\main\java
 C:\sist\work\jspwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3814672407.index
 \jspProject\src\main\java
+C:\sist\work\jspwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\687971379.index
+\jspAjaxProject\src\main\java
 C:\sist\work\jspwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1069776592.index
 \jspProject\src\main\java
 C:\sist\work\jspwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1722112997.index

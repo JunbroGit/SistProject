@@ -1,9 +1,9 @@
 <%@page import="org.json.simple.JSONObject"%>
 <%@page import="org.json.simple.JSONArray"%>
 <%@page import="java.text.SimpleDateFormat"%>
-<%@page import="ajaxboard.AjaxBoardDto"%>
+<%@page import="ajaxboard.db.AjaxBoardDto"%>
 <%@page import="java.util.List"%>
-<%@page import="ajaxboard.AjaxBoardDao"%>
+<%@page import="ajaxboard.db.AjaxBoardDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%

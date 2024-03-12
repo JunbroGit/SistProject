@@ -1,0 +1,5 @@
+package myinfo.db;
+
+public class MyinfoDto {
+
+}
