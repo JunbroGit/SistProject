@@ -67,7 +67,7 @@
 			<tr>
 				<td colspan="2" align="center">
 					<button type="submit" class="btn btn-outline-success">서버로 전송</button>
-					<button type="button" class="btn btn-warning" onclick="location.href='introList.jsp'">목록</button>
+					<button type="button" class="btn btn-warning" onclick="location.href='infoList.jsp'">목록</button>
 				</td>
 			</tr>
 		</table>

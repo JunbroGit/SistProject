@@ -20,6 +20,7 @@
 	  
 	//dao
 	AjaxBoardDao dao=new AjaxBoardDao();
+	
 	//insert
 	dao.insertBoard(dto);
 %>
