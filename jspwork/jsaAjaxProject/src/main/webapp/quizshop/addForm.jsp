@@ -37,7 +37,7 @@
 					<td>
 					<div class="d-inline-flex">
 						<select name="photo" id="photo" class="form-control" style="width: 150px;">
-							<option value="1">판쵸외투</option>
+							<option value="1">판초외투</option>
 							<option value="2">가디건</option>
 							<option value="25">원피스</option>
 							<option value="34">반바지</option>

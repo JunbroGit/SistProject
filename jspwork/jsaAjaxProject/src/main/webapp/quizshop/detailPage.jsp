@@ -12,7 +12,7 @@
 <title>Insert title here</title>
 </head>
 <%
-	String num = request.getParameter("num");
+	String num=request.getParameter("num");
 	QuizShopDao dao=new QuizShopDao();
 	QuizShopDto dto=dao.getOneShop(num);
 %>
