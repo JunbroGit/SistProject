@@ -14,11 +14,9 @@
 <title>Insert title here</title>
 <style type="text/css">
 	.col{
-		border: 0px solid gray;
+		border: 1px solid gray;
 		margin-right: 20px;
 		margin-top: 10px;
-		font-family: 'Dongle';
-		font-size: 1.5em;
 		max-width: 200px;
 		max-height: 400px;
 	}
@@ -27,9 +25,16 @@
 		width: 180px;
 		height: 200px;
 	}
+	
+	.col b{
+		font-family: 'Dongle';
+		font-size: 1.6em;
+	}
     
     .col span{
     	color: gray;
+    	font-family: 'Dongle';
+    	font-size: 1.2em;
     }
 </style>
 </head>
