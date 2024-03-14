@@ -16,14 +16,17 @@
 	.col{
 		border: 0px solid gray;
 		margin-right: 20px;
+		margin-top: 10px;
 		font-family: 'Dongle';
 		font-size: 1.5em;
+		max-width: 200px;
+		max-height: 400px;
 	}
 	
 	.col img{
-        width: 100%;
-        height: 200px;
-    }
+		width: 180px;
+		height: 200px;
+	}
     
     .col span{
     	color: gray;
