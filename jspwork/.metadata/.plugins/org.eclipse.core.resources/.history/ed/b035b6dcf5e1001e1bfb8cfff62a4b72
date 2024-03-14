@@ -1,0 +1,5 @@
+package simpleboard.model;
+
+public class SimpleBoardDao {
+
+}

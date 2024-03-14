@@ -53,10 +53,10 @@
 		</tr>
 	</table>
 		<div style="margin-left: 380px;">
-			<button class="btn btn-info" onclick="location.href='addForm.jsp'">글쓰기</button>
-			<button class="btn btn-success" onclick="location.href='boardList.jsp'">목록</button>
-			<button class="btn btn-warning">수정</button>
-			<button class="btn btn-danger">삭제</button>
+			<button class="btn btn-outline-info" onclick="location.href='addForm.jsp'">글쓰기</button>
+			<button class="btn btn-outline-success" onclick="location.href='boardList.jsp'">목록</button>
+			<button class="btn btn-outline-warning" onclick="location.href='updateForm.jsp?num=<%=num%>'">수정</button>
+			<button class="btn btn-outline-danger" onclick="location.href='deleteForm.jsp?num=<%=num%>'">삭제</button>
 		</div>
 </div>
 </body>
