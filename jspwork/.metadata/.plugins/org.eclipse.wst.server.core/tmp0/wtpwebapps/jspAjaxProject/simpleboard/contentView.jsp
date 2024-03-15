@@ -21,7 +21,118 @@
 		color: #ccc;
 		font-size: 0.8em;
 	}
+	
+	span.aday{
+		float: right;
+		font-size: 0.8em;
+		color: #bbb;
+	}
+	
+	div.alist{
+		margin-left: 20px;
+	}
+	
+	i.amod{
+    	margin-left: 20px;
+    	color: green;
+    }
+    
+    i.adel{
+    	color: red;
+    }
 </style>
+<script type="text/javascript">
+  $(function(){
+	  
+	  list();
+	  
+	  //ajax insert
+	  var num=$("#num").val();
+	  //alert(num);
+	  
+	  $("#btnasend").click(function(){
+		  
+		  var nickname=$("#nickname").val().trim();
+		  var content=$("#content").val().trim();
+		  
+		   if(nickname=='')
+			{
+			   alert("닉네임을 입력후 저장해주세요");
+			   return;
+			}
+		   if(content=='')
+			{
+			   alert("댓글내용을 입력후 저장해주세요");
+			   return;
+			}
+		  
+		  $.ajax({
+			  
+			  type:"get",
+			  url:"../simpleboardanswer/insertAnswer.jsp",
+			  dataType:"html",
+			  data:{"num":num,"nickname":nickname,"content":content},
+			  success:function(){
+				 //기존입력값 지우기
+				 $("#nickname").val('');
+				 $("#content").val('');
+				 
+				 list();
+			  }
+		  });
+	  });
+	  
+	  //리스트의 삭제버튼클릭시 삭제
+	  $(document).on("click",".adel",function(){
+		 
+		  var idx=$(this).attr("idx");
+		  //alert(idx);
+		  var ans=confirm("댓글을 삭제할거에유?");
+		  
+		  if(ans){
+			  $.ajax({
+				type:"get",
+				url:"../simpleboardanswer/deleteAnswer.jsp",
+				dataType:"html",
+				data:{"idx":idx},
+				success:function(){
+					alert("삭재했어유");
+					list();
+				}
+			  })
+		  }
+	  });
+  });
+  
+  
+  function list()
+  {
+	  console.log("list num="+$("#num").val());
+	  
+	  $.ajax({
+		  
+		  type:"get",
+		  url:"../simpleboardanswer/listAnswer.jsp",
+		  dataType:"json",
+		  data:{"num":$("#num").val()},
+		  success:function(res){
+			 
+			  //댓글갯수출력
+			  $("b.acount>span").text(res.length);
+			  
+			  var s="";
+			  $.each(res,function(idx,item){
+				  
+				  s+="<div>"+item.nick+":  "+item.content;
+				  s+="<span class='aday'>"+item.writeday+"</span>";
+				  s+="<i class='bi bi-pencil-square amod'></i>";
+				  s+="<i class='bi bi-trash adel' idx="+item.idx+"></i>";
+			  });
+			  $("div.alist").html(s);
+		  }
+	  });
+  }
+</script>
 </head>
 <%
 	String num=request.getParameter("num");
@@ -34,6 +145,8 @@
 	SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
 %>
 <body>
+<input type="hidden" id="num" value="<%=num%>">
+
 <div style=" margin: 50px 100px; width: 500px;">
 	<table class="table table-bordered">
 		<caption align="top"><b style="font-size: 20pt;"><%=dto.getSubject() %></b></caption>
@@ -49,6 +162,22 @@
 				<%=dto.getContent().replace("\n", "<br>") %>
 			</td>
 		</tr>
+		
+		<!-- 댓글 -->
+		<tr>
+		<td>
+		<b class="acount">댓글<span>0</span></b>
+		<div class="alist">
+			댓글목록
+		</div>
+        <div class="aform input-group">
+           <input type="text" id="nickname" class="form-control" style="width: 80px;" placeholder="닉네임">
+           <input type="text" id="content" class="form-control" style="width: 300px; margin-left: 10px;" placeholder="댓글메세지">
+           <button type="button" id="btnasend" class="btn btn-info btn-sm">저장</button>
+        </div>
+        </td>
+        </tr>
+		
 		<tr>
 			<td align="center">
 				<button type="button" class="btn btn-outline-info" onclick="location.href='addForm.jsp'"><i class="bi bi-pencil"></i>글쓰기</button>

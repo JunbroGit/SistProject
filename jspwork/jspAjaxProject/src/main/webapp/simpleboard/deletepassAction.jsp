@@ -1,3 +1,4 @@
+<%@page import="simpleboard.model.SimpleBoardDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -10,6 +11,27 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<%
+	String num=request.getParameter("num");
+	String pass=request.getParameter("pass");
+	
+	SimpleBoardDao dao=new SimpleBoardDao();
+	
+	boolean check=dao.isPassCheck(num, pass);
+	
+	if(check){
+		dao.deleteSimpleBoard(num);
+		%>
+		<script type="text/javascript">
+			alert("삭제되었습니다\n목록으로 이동해유")
+			location.href='boardList.jsp';
+		</script>
+	<%}else{%>
+		<script type="text/javascript">
+		alert("비밀번호가 틀렸어유");
+        history.back();
+		</script>
+	<%}
+%>
 </body>
 </html>
