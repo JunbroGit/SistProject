@@ -20,21 +20,21 @@
 <jsp:setProperty property="*" name="dto"/>
 
 <%
-	String[] hobbies=request.getParameterValues("hobby");
-	if (hobbies!=null) {
-	    StringBuilder hobbyStr=new StringBuilder();
-	    
-	    for (String hobby : hobbies) {
-	        hobbyStr.append(hobby).append(",");
-	    }
-	    
-	    hobbyStr.delete(hobbyStr.length()-1, hobbyStr.length());
-	    
-	    dto.setHobby(hobbyStr.toString());
-	    
-	}else{
-	    dto.setHobby("난 취미가 없어유");
+	String[] hobby=request.getParameterValues("hobby");
+
+	String myhobby="";
+
+	if(hobby==null)
+		myhobby="no";
+	else{
+		for(int i=0;i<hobby.length;i++){
+			myhobby+=hobby[i]+",";
+		}
+		
+		myhobby=myhobby.substring(0,myhobby.length()-1);
 	}
+	
+	dto.setHobby(myhobby);
 
 	dao.insertIntro(dto);
 	
