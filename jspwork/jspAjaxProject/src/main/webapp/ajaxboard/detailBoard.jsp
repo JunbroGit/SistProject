@@ -1,7 +1,7 @@
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="org.json.simple.JSONObject"%>
-<%@page import="ajaxboard.AjaxBoardDto"%>
-<%@page import="ajaxboard.AjaxBoardDao"%>
+<%@page import="ajaxboard.db.AjaxBoardDto"%>
+<%@page import="ajaxboard.db.AjaxBoardDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%

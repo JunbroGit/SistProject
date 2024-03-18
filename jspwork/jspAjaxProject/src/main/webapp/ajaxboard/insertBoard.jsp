@@ -1,5 +1,5 @@
-<%@page import="ajaxboard.AjaxBoardDao"%>
-<%@page import="ajaxboard.AjaxBoardDto"%>
+<%@page import="ajaxboard.db.AjaxBoardDao"%>
+<%@page import="ajaxboard.db.AjaxBoardDto"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
@@ -20,6 +20,7 @@
 	  
 	//dao
 	AjaxBoardDao dao=new AjaxBoardDao();
+	
 	//insert
 	dao.insertBoard(dto);
 %>
