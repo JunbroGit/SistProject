@@ -166,4 +166,8 @@ public class GuestDao {
 		}
 	}
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 5d1692f77e6cf40a0a83f743137a408426ce9f3f

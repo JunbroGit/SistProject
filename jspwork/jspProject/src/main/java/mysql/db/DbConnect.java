@@ -29,12 +29,21 @@ public class DbConnect {
 		Connection conn=null;
 		
 		try {
+<<<<<<< HEAD
 			conn=DriverManager.getConnection(MYSQL_URL, "angel", "a1234");
 			System.out.println("MYSQL 계정연결성공");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			System.out.println("MYSQL 연결실패: "+e.getMessage());
+=======
+			conn=DriverManager.getConnection(MYSQL_URL, "junbro", "1234");
+			System.out.println("MYSQL계정연결성공");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.out.println("MYSQL연결실패: "+e.getMessage());
+>>>>>>> 5d1692f77e6cf40a0a83f743137a408426ce9f3f
 		}
 		
 		

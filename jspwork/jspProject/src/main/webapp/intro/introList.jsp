@@ -58,4 +58,8 @@
 	<button type="button" class="btn btn-success" onclick="location.href='addForm.jsp'">추가</button>
 </div>
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> 5d1692f77e6cf40a0a83f743137a408426ce9f3f

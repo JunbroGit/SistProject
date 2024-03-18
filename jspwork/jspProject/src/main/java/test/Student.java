@@ -39,4 +39,8 @@ public class Student {
 	public void setScore(int score) {
 		this.score = score;
 	}
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 5d1692f77e6cf40a0a83f743137a408426ce9f3f

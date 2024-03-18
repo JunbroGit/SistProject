@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .happy{ /*전체 태그에 적용*/
+            color: #ffc873;
+            font-size: 30px;
+            font-family: 'Comic Sans MS';
+        }
+
+        b.nice{ /*b태그에서만 적용되는 클래스*/
+            color: black;
+            text-decoration: underline;
+        }
+
+        img.imga{
+            width: 500px;
+            height: 500px;
+            border: 10px groove gray;
+            margin-left: 200px;
+            border-radius: 300px;
+        }
+
+        img.imgb{
+            width: 200px;
+            height: 200px;
+            box-shadow: 5px 5px 5px grey;
+            border-radius: 30px 50px 20px 60px;
+        }
+    </style>
+</head>
+<body>
+    <font size="5" color="red">Font Tag!!</font>
+    <span style="color: darkcyan; font-size: 2em;">Span Tag!!</span>
+    <span style="border: 3px solid green;">안녕하세유</span>
+    <div class="happy nice">
+        Div Tag1!!
+    </div>
+    <div class="happy">Div Tag2</div>
+    <b class="happy nice">B Tag!!굵게 속성이 포함된 태그</b>
+    <br>
+    <img src="../image/음식이미지/1.jpg" alt="샌드위치" title="나는 맛꿀마" class="imga">
+    <br>
+    <img src="../image/음식이미지/2.jpg" alt="꼬지" title="나는 맛꿀마" class="imgb">
+</body>
+</html>

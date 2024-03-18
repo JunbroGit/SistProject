@@ -143,8 +143,13 @@ public class InfoDao {
 			pstmt=conn.prepareStatement(sql);
 			
 			pstmt.setString(1, dto.getName());
+<<<<<<< HEAD
 			pstmt.setString(2, dto.getName());
 			pstmt.setString(3, dto.getName());
+=======
+			pstmt.setString(2, dto.getAddr());
+			pstmt.setString(3, dto.getNum());
+>>>>>>> 5d1692f77e6cf40a0a83f743137a408426ce9f3f
 			
 			pstmt.execute();
 		} catch (SQLException e) {
@@ -154,4 +159,8 @@ public class InfoDao {
 			db.dbClose(pstmt, conn);
 		}
 	}
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 5d1692f77e6cf40a0a83f743137a408426ce9f3f
