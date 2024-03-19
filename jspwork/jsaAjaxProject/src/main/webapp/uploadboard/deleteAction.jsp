@@ -30,7 +30,7 @@
 		
 		//파일생성
 		File file=new File(uploadPath+"\\"+imgName);
-		
+		 
 		//파일삭제
 		if(file.exists()) //파일이 존재하면
 			file.delete(); //파일을 삭제

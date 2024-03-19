@@ -28,7 +28,7 @@
 		color: #bbb;
 	}
 	
-	div.alist{
+	div.alist{ 
 		margin-left: 20px;
 	}
 	

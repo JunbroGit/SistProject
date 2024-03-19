@@ -22,4 +22,4 @@
 	response.sendRedirect("contentView.jsp?num="+dto.getNum());
 %>
 </body>
-</html>
+</html> 

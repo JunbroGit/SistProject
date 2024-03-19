@@ -25,7 +25,7 @@
 	<h5 class="alert alert-info">총 <%=list.size() %>개의 게시글이 있습니다.</h5>
 	<table class="table table-hover">
 		<tr>
-			<th width="80">번호</th>
+			<th width="80">번호</th> 
 			<th width="280">제목</th>
 			<th width="160">작성자</th>
 			<th width="250">작성일</th>

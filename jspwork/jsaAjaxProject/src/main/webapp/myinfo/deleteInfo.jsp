@@ -6,4 +6,4 @@
 	MyinfoDao dao=new MyinfoDao();
 	dao.deleteMyInfo(num);
 	response.sendRedirect("infoList.jsp");
-%>
+%> 

@@ -19,7 +19,7 @@
 <jsp:useBean id="dao" class="myinfo.db.MyinfoDao"/>
 <jsp:useBean id="dto" class="myinfo.db.MyinfoDto"/>
 <jsp:setProperty property="*" name="dto"/>
-<%
+<% 
 dto.setHp(hp);
 dao.updateInfo(dto);
 response.sendRedirect("infoList.jsp");

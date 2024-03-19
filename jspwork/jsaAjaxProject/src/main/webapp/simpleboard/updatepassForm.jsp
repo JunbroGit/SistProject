@@ -24,5 +24,5 @@
 		<button type="submit" class="btn btn-primary" style="margin-left: 100px;">수정</button>
 	</form>
 </div>
-</body>
+</body> 
 </html>

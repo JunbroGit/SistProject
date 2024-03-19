@@ -14,7 +14,7 @@
 		if(hp.value.length==4)
 			frm.hp3.focus();
 	}
-</script>
+</script> 
 </head>
 <body>
 <div style="margin: 100px 100px; width: 400px;">

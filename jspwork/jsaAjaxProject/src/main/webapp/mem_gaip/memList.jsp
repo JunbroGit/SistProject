@@ -20,7 +20,7 @@
 	}
 </style>
 <%
-	String m_num=request.getParameter("m_num");	
+	String m_num=request.getParameter("m_num");
 	MemgaipDao dao=new MemgaipDao();
 	MemgaipDto selecteddto=dao.getData(m_num);
 	List<MemgaipDto> list=dao.getAllDatas();

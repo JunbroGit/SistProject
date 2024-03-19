@@ -26,7 +26,7 @@
 	
 	body *{
 		font-family: 'Gaegu';
-	}
+	} 
 </style>
 </head>
 <%

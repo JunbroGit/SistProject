@@ -20,7 +20,7 @@
 		})
 	});
 </script>
-</head>
+</head> 
 <body>
 <div style="margin: 50px 100px; width: 400px;">
 	<form action="addAction.jsp">

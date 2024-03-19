@@ -23,7 +23,7 @@
 	<h3 class="alert alert-info">QuizShop 입고목록</h3>
 	<br>
 	<button type="button" class="btn btn-info" onclick="location.href='addForm.jsp'">상품추가</button>
-	<br>
+	<br> 
 	<table class="table table-bordered">
 		<tr class="table-info">
 			<th width="60">번호</th>

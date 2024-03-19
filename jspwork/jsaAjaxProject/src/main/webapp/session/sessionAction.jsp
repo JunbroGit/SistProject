@@ -17,7 +17,7 @@
 	String msg=(String)session.getAttribute("msg");
 	String gift=request.getParameter("gift");
 	
-	if(msg==null || !msg.equals("happy"))
+	if(msg==null || !msg.equals("happy")) 
 	{%>
 		<h3 style="color: red;">시간초과로 꽝이여유</h3>
 	<%}else

@@ -27,7 +27,7 @@
 					<button type="submit" class="btn btn-danger">삭제</button>
 					<button type="button" class="btn btn-success" onclick="history.back()">이전</button>
 				</td>
-			</tr>
+			</tr> 
 		</table>
 	</form>
 </div>

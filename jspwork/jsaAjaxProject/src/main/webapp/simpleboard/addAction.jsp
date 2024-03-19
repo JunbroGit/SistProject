@@ -24,7 +24,7 @@
 
 	//response.sendRedirect("boardList.jsp");
 	
-	//인서트 후 내용보기로 이동하려면 방금 insert된 num값을 알아야한다
+	//인서트 후 내용보기로 이동하려면 방금 insert된 num값을 알아야한다 
 	int num=dao.getMaxnum();
 	response.sendRedirect("contentView.jsp?num="+num);
 %>

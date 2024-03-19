@@ -23,7 +23,7 @@
 				<td>
 					<input type="text" name="writer" class="form-control" style="width: 120px;" required="required">
 				</td>
-			</tr>
+			</tr> 
 			<tr>
 				<th width="100" class="table-info">제목</th>
 				<td>

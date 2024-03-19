@@ -26,7 +26,7 @@
 <div style="margin: 50px 100px;">
 	<h3 class="alert alert-success" style="width: 650px;">게시글 자세히보기</h3>
 	<table class="table table-condensed" style="width: 650px;">
-		<tr>
+		<tr> 
 			<td>
 				<b><%=dto.getSubject() %></b>
 			</td>

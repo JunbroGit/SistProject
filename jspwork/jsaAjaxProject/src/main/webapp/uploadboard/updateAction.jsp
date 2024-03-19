@@ -30,7 +30,7 @@
 	MultipartRequest multi=new MultipartRequest(request,realFolder,uploadSize,"utf-8",new DefaultFileRenamePolicy());
 	
 	//입력값 읽기
-	String writer=multi.getParameter("writer");
+	String writer=multi.getParameter("writer"); 
 	String subject=multi.getParameter("subject");
 	String content=multi.getParameter("content");
 	String pass=multi.getParameter("pass");

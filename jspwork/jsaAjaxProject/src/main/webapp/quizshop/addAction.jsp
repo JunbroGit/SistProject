@@ -18,6 +18,6 @@
 	
 	QuizShopDao dao=new QuizShopDao();
 	dao.insertShop(dto);
-	
+	 
 	response.sendRedirect("shopList.jsp");
 %>

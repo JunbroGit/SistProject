@@ -5,4 +5,4 @@
 	String idx=request.getParameter("idx");
 	SimpleAnswerDao dao=new SimpleAnswerDao();
 	dao.deleteAnswer(idx);
-%>
+%> 

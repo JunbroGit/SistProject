@@ -18,7 +18,7 @@
 <script type="text/javascript">
 function readURL(input) {
     if (input.files && input.files[0]) {
-    	
+    	 
         var reader = new FileReader(); //파일을 읽기 위한 FileReader객체 생성
         
         reader.onload = function (e) {

@@ -23,7 +23,7 @@
 	//false면 경고후 돌아감
 	if(check){
 		response.sendRedirect("updateForm.jsp?num="+num);
-	}else{%>
+	}else{%> 
 		<script type="text/javascript">
 			alert("비밀번호가 맞지않아유");
 			history.back();

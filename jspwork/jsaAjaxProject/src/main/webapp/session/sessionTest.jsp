@@ -15,7 +15,7 @@
 	//세션 저장하는 법
 	session.setAttribute("msg", "happy day!!");
 	session.setMaxInactiveInterval(60); //60초 유지시간 지정
-%>
+%> 
 
 	<h3>세션값 얻기</h3>
 	세션값: <%=session.getAttribute("msg") %><br>

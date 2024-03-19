@@ -21,4 +21,4 @@
 	dao.insertMyInfo(dto);
 	
 	response.sendRedirect("infoList.jsp");
-%>
+%> 

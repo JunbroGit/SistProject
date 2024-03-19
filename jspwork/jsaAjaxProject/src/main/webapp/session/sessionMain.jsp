@@ -15,7 +15,7 @@
 	session.setMaxInactiveInterval(10);
 %>
 <h2>10초안에 눌러주세요!!</h2>
-<form action="sessionAction.jsp" method="post">
+<form action="sessionAction.jsp" method="post"> 
 	<h2>받고싶은 생일 선물은?</h2>
 	<input type="radio" value="아이폰15" name="gift">아이폰15&nbsp;
 	<input type="radio" value="갤럭시 폴드" name="gift">갤럭시 폴드&nbsp;

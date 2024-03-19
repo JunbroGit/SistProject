@@ -26,7 +26,7 @@
 			alert("삭제되었습니다\n목록으로 이동해유")
 			location.href='boardList.jsp';
 		</script>
-	<%}else{%>
+	<%}else{%> 
 		<script type="text/javascript">
 		alert("비밀번호가 틀렸어유");
         history.back();

@@ -19,7 +19,7 @@
 <%
 	String num=request.getParameter("num");
 	SimpleBoardDao dao=new SimpleBoardDao();
-	SimpleBoardDto dto=dao.getContent(num);
+	SimpleBoardDto dto=dao.getContent(num); 
 %>
 <body>
 <div style="margin: 50px 100px; width: 500px;">

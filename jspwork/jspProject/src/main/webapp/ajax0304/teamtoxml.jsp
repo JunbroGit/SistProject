@@ -19,7 +19,7 @@
 	
 	String sql="select * from team order by num";
 	
-	try{
+	try{ 
 		pstmt=conn.prepareStatement(sql);
 		rs=pstmt.executeQuery();
 		

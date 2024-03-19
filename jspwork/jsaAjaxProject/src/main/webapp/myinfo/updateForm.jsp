@@ -19,7 +19,7 @@
 			frm.hp3.focus();
 	}
 </script>
-<%
+<% 
 	String num=request.getParameter("num");
 	MyinfoDao dao=new MyinfoDao();
 	MyinfoDto dto=dao.getOneData(num);
