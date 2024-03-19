@@ -1,0 +1,55 @@
+package day0131;
+
+import java.awt.Canvas;
+import java.awt.Graphics;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class ShopAddForm extends JFrame{
+
+	JTextField tfSang,tfSu,tfDan;
+	JLabel lblPhoto;
+	JButton btnImage,btnInsert;
+	String imageName;
+	
+	//db모델생성
+	ShopDbModel model=new ShopDbModel();
+	//내부클래스
+	PhotoDraw photoDraw=new PhotoDraw();
+
+	public ShopAddForm() {
+		super("상품 주가폼");
+		this.setBounds(200, 100, 400, 400);
+		initDesign();
+		this.setVisible(true);
+	}
+	
+	public void initDesign()
+	{
+		this.setLayout(null);
+		
+		JLabel lbl1=new JLabel("상품명");
+		lbl1.setBounds(20, 10, 60, 30);
+		this.add(lbl1);
+	}
+	
+	//내부클래스..이미지삽입
+	class PhotoDraw extends Canvas{
+		
+		@Override
+		public void paint(Graphics g) {
+			// TODO Auto-generated method stub
+			super.paint(g);
+		}
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

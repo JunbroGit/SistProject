@@ -1,0 +1,14 @@
+package simpleboard.model;
+
+import java.sql.Timestamp;
+
+public class SimpleBoardDto {
+
+	private String num;
+	private String writer;
+	private String pass;
+	private String subject;
+	private String content;
+	private int readcount;
+	private Timestamp writeday;
+}

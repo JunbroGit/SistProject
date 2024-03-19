@@ -1,0 +1,208 @@
+<?xml version="1.0" ?>
+<SAVED_DATA>
+	<bookmarks>
+		<jdbcDriver className="oracle.jdbc.driver.OracleDriver" name="Oracle JDBC driver" type="ORACLE" version="21.11.0.0.0">
+			<jar fileName="C:\sist0103\util\ojdbc11.jar" />
+		</jdbcDriver>
+		<jdbcDriver className="oracle.jdbc.OracleDriver" name="Oracle JDBC driver" type="ORACLE" version="21.11.0.0.0">
+			<jar fileName="C:\sist0103\util\ojdbc11.jar" />
+		</jdbcDriver>
+		<jdbcDriver className="org.apache.derby.jdbc.EmbeddedDriver" name="Apache Derby Embedded JDBC Driver" type="DERBY" version="10.3.1.4 - (561794)">
+			<jar fileName="C:/Users/user/.p2/pool/plugins/com.quantum.derby_3.3.10/lib/derby.jar" />
+		</jdbcDriver>
+		<bookmark>
+			<name>(Internal) Derby</name>
+			<username>QUANTUM</username>
+			<password />
+			<prompt>false</prompt>
+			<connect>jdbc:derby:C:/Users/user/.p2/pool/plugins/com.quantum.derby_3.3.10/data/quantum</connect>
+			<autoCommit>true</autoCommit>
+			<autoCommitPreference>Always True</autoCommitPreference>
+			<autoCommitIgnoreView>false</autoCommitIgnoreView>
+			<quoteAll>false</quoteAll>
+			<sendQueryAsIs>false</sendQueryAsIs>
+			<stripNewline>false</stripNewline>
+			<shutdownOnDisconnect>true</shutdownOnDisconnect>
+			<defaultEncoding />
+			<driver>org.apache.derby.jdbc.EmbeddedDriver</driver>
+			<type>DERBY</type>
+			<substituteVariables>false</substituteVariables>
+			<variablesRegexp>\$\{(.*?)\}</variablesRegexp>
+			<driverLocation>C:/Users/user/.p2/pool/plugins/com.quantum.derby_3.3.10/lib/derby.jar</driverLocation>
+			<Other_Schemas schemaRule="useAll" />
+			<quickList />
+			<queryList />
+		</bookmark>
+		<bookmark>
+			<name>stu</name>
+			<username>stu</username>
+			<password>a1234</password>
+			<prompt>false</prompt>
+			<connect>jdbc:oracle:thin:@localhost:1521:XE</connect>
+			<autoCommit>true</autoCommit>
+			<autoCommitPreference>Always True</autoCommitPreference>
+			<autoCommitIgnoreView>false</autoCommitIgnoreView>
+			<quoteAll>false</quoteAll>
+			<sendQueryAsIs>false</sendQueryAsIs>
+			<stripNewline>false</stripNewline>
+			<shutdownOnDisconnect>false</shutdownOnDisconnect>
+			<defaultEncoding />
+			<driver>oracle.jdbc.OracleDriver</driver>
+			<type>ORACLE</type>
+			<substituteVariables>false</substituteVariables>
+			<variablesRegexp>\$\{(.*?)\}</variablesRegexp>
+			<driverLocation>C:\sist0103\util\ojdbc11.jar</driverLocation>
+			<Other_Schemas schemaRule="useSelected">
+				<schema>STU</schema>
+			</Other_Schemas>
+			<quickList />
+			<queryList />
+		</bookmark>
+		<bookmark>
+			<name>junbro</name>
+			<username>junbro</username>
+			<password>a1234</password>
+			<prompt>false</prompt>
+			<connect>jdbc:oracle:thin:@localhost:1521:XE</connect>
+			<autoCommit>true</autoCommit>
+			<autoCommitPreference>Always True</autoCommitPreference>
+			<autoCommitIgnoreView>false</autoCommitIgnoreView>
+			<quoteAll>false</quoteAll>
+			<sendQueryAsIs>false</sendQueryAsIs>
+			<stripNewline>false</stripNewline>
+			<shutdownOnDisconnect>false</shutdownOnDisconnect>
+			<defaultEncoding />
+			<driver>oracle.jdbc.OracleDriver</driver>
+			<type>ORACLE</type>
+			<substituteVariables>false</substituteVariables>
+			<variablesRegexp>\$\{(.*?)\}</variablesRegexp>
+			<driverLocation>C:\sist0103\util\ojdbc11.jar</driverLocation>
+			<Other_Schemas schemaRule="useSelected">
+				<schema>JUNBRO</schema>
+			</Other_Schemas>
+			<quickList />
+			<queryList />
+		</bookmark>
+		<bookmark>
+			<name>faker</name>
+			<username>faker</username>
+			<password>a1234</password>
+			<prompt>false</prompt>
+			<connect>jdbc:oracle:thin:@localhost:1521:XE</connect>
+			<autoCommit>true</autoCommit>
+			<autoCommitPreference>Always True</autoCommitPreference>
+			<autoCommitIgnoreView>false</autoCommitIgnoreView>
+			<quoteAll>false</quoteAll>
+			<sendQueryAsIs>false</sendQueryAsIs>
+			<stripNewline>false</stripNewline>
+			<shutdownOnDisconnect>false</shutdownOnDisconnect>
+			<defaultEncoding />
+			<driver>oracle.jdbc.driver.OracleDriver</driver>
+			<type>ORACLE</type>
+			<substituteVariables>false</substituteVariables>
+			<variablesRegexp>\$\{(.*?)\}</variablesRegexp>
+			<driverLocation>C:\sist0103\util\ojdbc11.jar</driverLocation>
+			<Other_Schemas schemaRule="useSelected">
+				<schema>FAKER</schema>
+			</Other_Schemas>
+			<quickList />
+			<queryList>
+				<query>
+					<queryString>create table stuinfo(s_no number(5) primary key,s_name varchar2(20),
+s_gender varchar2(20),s_age number(5),s_hp varchar(30),gaipday date)</queryString>
+				</query>
+				<query>
+					<queryString>create sequence seq_info</queryString>
+				</query>
+				<query>
+					<queryString>create table sales(num number(5) primary key,
+type varchar2(10),
+sangpum varchar(30),
+su number(5),
+dan number(5),
+ipgo date)</queryString>
+				</query>
+				<query>
+					<queryString>create sequence seq_score</queryString>
+				</query>
+				<query>
+					<queryString>create table sungjuk(num number(5) CONSTRAINT sungjuk_pk_num primary key,
+name varchar2(20),
+java number(5),oracle number(5),total number(5),average number(6,2))</queryString>
+				</query>
+				<query>
+					<queryString>create table sawonmember(s_no number(5) primary key,
+s_name varchar2(20),buseo varchar2(30),
+position varchar2(30),gender varchar2(20),
+pay number(20),bonus number(20),ipsaday date)</queryString>
+				</query>
+				<query>
+					<queryString>create sequence seq_smem</queryString>
+				</query>
+				<query>
+					<queryString>drop table stuinfo</queryString>
+				</query>
+				<query>
+					<queryString>create table stuinfo(num number(5) primary key,
+name varchar2(20),java number(5),jsp number(5),spring number(5),
+total number(5),avarage number(6,2),
+ban varchar2(10))</queryString>
+				</query>
+				<query>
+					<queryString>insert into stuinfo values(seq1.nextval,'유재석',100,100,100,300,100,'aws반')</queryString>
+				</query>
+				<query>
+					<queryString>CREATE TABLE Employee (employee_id INT PRIMARY KEY,
+name VARCHAR(50),
+birth_date DATE,
+hire_date DATE,
+department_id INT,
+position VARCHAR(50),
+salary DECIMAL(10, 2),
+email VARCHAR(100),
+phone_number VARCHAR(20))</queryString>
+				</query>
+				<query>
+					<queryString>CREATE TABLE Department (department_id INT PRIMARY KEY,
+department_name VARCHAR(100))</queryString>
+				</query>
+				<query>
+					<queryString>CREATE SEQUENCE seq_sawon</queryString>
+				</query>
+				<query>
+					<queryString>CREATE TABLE Employee (employee_id number(10) PRIMARY KEY,
+name VARCHAR(50),
+birth_date DATE,
+hire_date DATE,
+department_id number(10),
+position VARCHAR(50),
+salary DECIMAL(10, 2),
+email VARCHAR(100),
+phone_number VARCHAR(20))</queryString>
+				</query>
+				<query>
+					<queryString>CREATE TABLE Department (department_id number(10) PRIMARY KEY,
+department_name VARCHAR(100))</queryString>
+				</query>
+				<query>
+					<queryString>drop table Employee</queryString>
+				</query>
+				<query>
+					<queryString>drop table Department</queryString>
+				</query>
+				<query>
+					<queryString>CREATE TABLE emp(emp_id number(10) PRIMARY KEY,
+emp_name VARCHAR2(50),
+birth_date VARCHAR2(20), 
+hire_date VARCHAR2(20),
+dept_id number(10),
+position VARCHAR2(50),
+salary number(10),
+email VARCHAR2(100),
+phone_number VARCHAR2(20),
+image VARCHAR2(100))</queryString>
+				</query>
+			</queryList>
+		</bookmark>
+	</bookmarks>
+</SAVED_DATA>

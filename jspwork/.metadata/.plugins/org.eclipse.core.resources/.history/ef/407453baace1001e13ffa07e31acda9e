@@ -1,0 +1,5 @@
+package simpleboard.db;
+
+public class SimpleBoardDto {
+
+}

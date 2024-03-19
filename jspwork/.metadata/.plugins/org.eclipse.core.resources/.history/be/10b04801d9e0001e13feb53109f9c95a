@@ -1,0 +1,11 @@
+package log.model;
+
+import mysql.db.DbConnect;
+
+public class LogDao {
+
+	DbConnect db=new DbConnect();
+	
+	//아이디를 통해 name값 얻이오기
+	
+}

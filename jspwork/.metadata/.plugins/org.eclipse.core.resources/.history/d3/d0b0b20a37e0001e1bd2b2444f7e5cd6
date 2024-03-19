@@ -1,0 +1,13 @@
+package quizshop.model;
+
+import java.sql.Timestamp;
+
+public class QuizShopDto {
+
+	private String num;
+	private String sang_name;
+	private String photo;
+	private int price;
+	private String ipgoday;
+	private Timestamp writeday;
+}

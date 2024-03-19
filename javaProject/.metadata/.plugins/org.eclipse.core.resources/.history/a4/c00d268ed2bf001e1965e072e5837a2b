@@ -1,0 +1,16 @@
+package day0131;
+
+import orcleDB.DbConnect;
+
+public class ShopDbModel {
+
+	DbConnect db=new DbConnect();
+	
+	//추가
+	
+	//전체조회
+	
+	//삭제
+	
+	//수정
+}

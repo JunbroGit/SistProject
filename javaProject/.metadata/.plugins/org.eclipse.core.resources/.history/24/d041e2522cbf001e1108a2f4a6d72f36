@@ -1,0 +1,53 @@
+package day0130;
+
+import java.awt.Color;
+import java.awt.Container;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class DeleteStuInfo extends JFrame{
+
+	Container cp;
+	JTextField tfnum;
+	JButton btndelete;
+	
+	public DeleteStuInfo(String title) {
+		super(title);
+		
+		cp=this.getContentPane();
+		this.setBounds(200, 100, 350, 130);
+		cp.setBackground(new Color(225, 225, 200));
+		initdesign();
+		this.setVisible(true);
+	}
+	
+	public void initdesign()
+	{
+		this.setLayout(null);
+		
+		JLabel lbltitle=new JLabel("삭제할 번호를 입력하세요");
+		
+		tfnum=new JTextField();
+		
+		btndelete=new JButton("삭제");
+		
+		lbltitle.setBounds(50, 30, 250, 20);
+		this.add(lbltitle);
+		
+		tfnum.setBounds(50, 200, 50, 20);
+		this.add(tfnum);
+		
+		btndelete.setBounds(50, 70, 50, 30);
+		this.add(btndelete);
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		new DeleteStuInfo("");
+	}
+
+}

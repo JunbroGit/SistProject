@@ -1,0 +1,74 @@
+package themProject;
+
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+import day0131.ShopAddForm;
+import day0131.ShopListForm;
+
+public class EmployeeMain extends JFrame implements ActionListener {
+
+    JButton btnManage, btnAdd, btnUpdate, btnList;
+
+    public EmployeeMain() {
+        super("EmployeeMain");
+        this.setBounds(200, 100, 400, 400);
+        initDesign();
+        this.setVisible(true);
+    }
+
+    public void initDesign() {
+        this.setLayout(new GridLayout(2, 2));
+        btnManage = new JButton("사원관리");
+        btnAdd = new JButton("사원추가");
+        btnUpdate = new JButton("사원수정");
+        btnList = new JButton("사원조회");
+
+        this.add(btnManage);
+        this.add(btnAdd);
+        this.add(btnUpdate);
+        this.add(btnList);
+
+        // 이벤트
+        btnManage.addActionListener(this);
+        btnAdd.addActionListener(this);
+        btnUpdate.addActionListener(this);
+        btnList.addActionListener(this);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        Object ob = e.getSource();
+
+        if (ob == btnManage) {
+            // "사원관리" 버튼이 눌렸을 때
+            this.remove(btnManage); // "사원관리" 버튼 제거
+            this.add(btnAdd); // "사원추가" 버튼 추가
+            this.add(btnUpdate); // "사원수정" 버튼 추가
+            this.revalidate(); // 레이아웃 변경 적용
+
+        } else if (ob == btnAdd) {
+            // "사원추가" 버튼이 눌렸을 때
+            // 여기에 "사원추가" 버튼 동작 추가
+            System.out.println("사원추가");
+
+        } else if (ob == btnUpdate) {
+            // "사원수정" 버튼이 눌렸을 때
+            // 여기에 "사원수정" 버튼 동작 추가
+            System.out.println("사원수정");
+
+        } else if (ob == btnList) {
+            // "사원조회" 버튼이 눌렸을 때
+            // 여기에 "사원조회" 버튼 동작 추가
+            System.out.println("사원조회");
+        }
+    }
+
+    public static void main(String[] args) {
+        new EmployeeMain();
+    }
+}

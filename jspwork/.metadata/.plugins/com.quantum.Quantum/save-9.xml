@@ -1,0 +1,160 @@
+<?xml version="1.0" ?>
+<SAVED_DATA>
+	<bookmarks>
+		<jdbcDriver className="oracle.jdbc.driver.OracleDriver" name="Oracle JDBC driver" type="ORACLE" version="21.11.0.0.0">
+			<jar fileName="C:\sist0103\util\ojdbc11.jar" />
+		</jdbcDriver>
+		<jdbcDriver className="com.mysql.cj.jdbc.Driver" name="MySQL Connector/J" type="MYSQL" version="mysql-connector-j-8.3.0 (Revision: 805f872a57875f311cb82487efcfb070411a3fa0)">
+			<jar fileName="C:\sist0103\util\mysql-connector-j-8.3.0.jar" />
+		</jdbcDriver>
+		<jdbcDriver className="org.apache.derby.jdbc.EmbeddedDriver" name="Apache Derby Embedded JDBC Driver" type="DERBY" version="10.3.1.4 - (561794)">
+			<jar fileName="C:/Users/user/.p2/pool/plugins/com.quantum.derby_3.3.10/lib/derby.jar" />
+		</jdbcDriver>
+		<bookmark>
+			<name>(Internal) Derby</name>
+			<username>QUANTUM</username>
+			<password />
+			<prompt>false</prompt>
+			<connect>jdbc:derby:C:/Users/user/.p2/pool/plugins/com.quantum.derby_3.3.10/data/quantum</connect>
+			<autoCommit>true</autoCommit>
+			<autoCommitPreference>Always True</autoCommitPreference>
+			<autoCommitIgnoreView>false</autoCommitIgnoreView>
+			<quoteAll>false</quoteAll>
+			<sendQueryAsIs>false</sendQueryAsIs>
+			<stripNewline>false</stripNewline>
+			<shutdownOnDisconnect>true</shutdownOnDisconnect>
+			<defaultEncoding />
+			<driver>org.apache.derby.jdbc.EmbeddedDriver</driver>
+			<type>DERBY</type>
+			<substituteVariables>false</substituteVariables>
+			<variablesRegexp>\$\{(.*?)\}</variablesRegexp>
+			<driverLocation>C:/Users/user/.p2/pool/plugins/com.quantum.derby_3.3.10/lib/derby.jar</driverLocation>
+			<Other_Schemas schemaRule="useAll" />
+			<quickList />
+			<queryList />
+		</bookmark>
+		<bookmark>
+			<name>junbro</name>
+			<username>junbro</username>
+			<password>a1234</password>
+			<prompt>false</prompt>
+			<connect>jdbc:oracle:thin:@localhost:1521:XE</connect>
+			<autoCommit>true</autoCommit>
+			<autoCommitPreference>Always True</autoCommitPreference>
+			<autoCommitIgnoreView>false</autoCommitIgnoreView>
+			<quoteAll>false</quoteAll>
+			<sendQueryAsIs>false</sendQueryAsIs>
+			<stripNewline>false</stripNewline>
+			<shutdownOnDisconnect>false</shutdownOnDisconnect>
+			<defaultEncoding />
+			<driver>oracle.jdbc.driver.OracleDriver</driver>
+			<type>ORACLE</type>
+			<substituteVariables>false</substituteVariables>
+			<variablesRegexp>\$\{(.*?)\}</variablesRegexp>
+			<driverLocation>C:\sist0103\util\ojdbc11.jar</driverLocation>
+			<Other_Schemas schemaRule="useSelected">
+				<schema>JUNBRO</schema>
+			</Other_Schemas>
+			<quickList />
+			<queryList>
+				<query>
+					<queryString>create table quizinfo(no number(5) primary key,
+name varchar2(20),
+hp varchar2(30),
+age varchar2(10),
+driver varchar2(10),
+writeday date)</queryString>
+				</query>
+			</queryList>
+		</bookmark>
+		<bookmark>
+			<name>mysql_junbro</name>
+			<username>junbro</username>
+			<password>1234</password>
+			<prompt>false</prompt>
+			<connect>jdbc:mysql://localhost:3306/coffee</connect>
+			<autoCommit>true</autoCommit>
+			<autoCommitPreference>Always True</autoCommitPreference>
+			<autoCommitIgnoreView>false</autoCommitIgnoreView>
+			<quoteAll>false</quoteAll>
+			<sendQueryAsIs>false</sendQueryAsIs>
+			<stripNewline>false</stripNewline>
+			<shutdownOnDisconnect>false</shutdownOnDisconnect>
+			<defaultEncoding />
+			<driver>com.mysql.cj.jdbc.Driver</driver>
+			<type>MYSQL</type>
+			<substituteVariables>false</substituteVariables>
+			<variablesRegexp>\$\{(.*?)\}</variablesRegexp>
+			<driverLocation>C:\sist0103\util\mysql-connector-j-8.3.0.jar</driverLocation>
+			<Other_Schemas schemaRule="useSelected">
+				<schema>coffee</schema>
+			</Other_Schemas>
+			<quickList />
+			<queryList>
+				<query>
+					<queryString>DELETE FROM myworld WHERE (num = 8) AND (writer = '') AND (content = '') AND (avata = '') AND (writeday = '2024-03-07 15:43:56')</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM myworld WHERE (num = 9) AND (writer = '') AND (content = '') AND (avata = '') AND (writeday = '2024-03-07 15:43:56')</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM myworld WHERE (num = 10) AND (writer = '') AND (content = '') AND (avata = '') AND (writeday = '2024-03-07 15:43:57')</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM myworld WHERE (num = 11)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM myworld WHERE (num = 12)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM myworld WHERE (num = 13)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM myworld WHERE (num = 14)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM myworld WHERE (num = 15)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM myworld WHERE (num = 16)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM myworld WHERE (num = 17)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM myworld WHERE (num = 18)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM myworld WHERE (num = 19)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM myworld WHERE (num = 21)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM myworld WHERE (num = 20)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM myworld WHERE (num = 22)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM myworld WHERE (num = 23)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM myworld WHERE (num = 24)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM myworld WHERE (num = 25)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM intro WHERE (num = 4)</queryString>
+				</query>
+				<query>
+					<queryString>create table simpleguest(num smallint auto_increment primary key,
+image varchar(50),nickname varchar(20),
+pass varchar(20),content varchar(1000),
+writeday datetime)</queryString>
+				</query>
+			</queryList>
+		</bookmark>
+	</bookmarks>
+</SAVED_DATA>

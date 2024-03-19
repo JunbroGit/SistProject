@@ -1,0 +1,52 @@
+<%@page import="quizshop.model.QuizShopDto"%>
+<%@page import="java.util.List"%>
+<%@page import="quizshop.model.QuizShopDao"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dongle&family=Gaegu&family=Nanum+Myeongjo&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<title>Insert title here</title>
+</head>
+<%
+	QuizShopDao dao=new QuizShopDao();
+	List<QuizShopDto> list=dao.getAllShops();
+%>
+<body>
+	<!-- 이미지가 크게 나오고 옆에 설명추가
+	     상품명   가격   입고일
+	     
+	     맨아래 목록,수정,삭제 버튼 3개 추가 -->
+<div style="margin: 50px 50px; width: 500px;">
+	<h3 class="alert alert-success">상품 자세히보기</h3>
+	<br>
+	<table class="table table-bordered">
+		<tr class="table-success">
+			<th width="60">상품이미지</th>
+			<th width="100">상품명</th>
+			<th width="100">가격</th>
+			<th width="150">입고일</th>
+		</tr>
+		
+		<%
+			for(int i=0;i<list.size();i++){
+				
+				QuizShopDto dto=list.get(i);
+				%>
+				<tr>
+					<td><img src="../image/쇼핑몰이미지/<%=dto.getPhoto() %>.jpg"></td>
+					<td><%=dto.getSang_name() %></td>
+					<td><%=dto.getPrice() %></td>
+					<td><%=dto.getIpgoday() %></td>
+				</tr>
+			<%}
+		%>
+		
+	</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+package mem_gaip.model;
+
+import mysql.db.DbConnect;
+
+public class MemgaipDto {
+
+	DbConnect db=new DbConnect();
+	
+	//아이디가 존재하면 true리턴
+	
+}

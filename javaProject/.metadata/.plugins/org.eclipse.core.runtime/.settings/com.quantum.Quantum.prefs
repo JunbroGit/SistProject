@@ -1,0 +1,8 @@
+com.quantum.actions.BookmarkSelectionUtil.bookmark=(Internal) Derby
+eclipse.preferences.version=1
+org.eclipse.ui.examples.templateeditor.customtemplates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+quantum.background.color=255,255,255
+quantum.dialogs.bookmarkwizard.path=C\:\\sist0103\\util\\ojdbc11.jar
+quantum.font=1|Consolas|12.0|0|WINDOWS|1|-16|0|0|0|0|0|0|0|1|0|0|0|0|Consolas;
+quantum.keyword.color=0,255,64
+quantum.text.color=255,255,255
