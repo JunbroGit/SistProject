@@ -16,10 +16,10 @@
 <body>
 <%
 	String realPath=getServletContext().getRealPath("/upload");
-	System.out.println();
+
 	int uploadSize=1024*1024*5; //5mb
 	
-	System.out.println(realPath);
+	//System.out.println(realPath);
 	
 	MultipartRequest multi=null;
 	

@@ -10,6 +10,7 @@
 <meta charset="UTF-8">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Gaegu&family=Nanum+Myeongjo&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 <title>Insert title here</title>
 <style type="text/css">
@@ -64,8 +65,8 @@
 					<td align="center" valign="middle"><%=dto.getM_hp() %></td>
 					<td align="center" valign="middle"><%=sdf.format(dto.getGaipday()) %></td>
 					<td align="center" valign="middle">
-						<button class="btn btn-success" onclick="location.href='updateForm.jsp?m_num=<%=dto.getM_num()%>'">수정</button>
-						<button class="btn btn-danger" onclick="location.href='deleteForm.jsp?m_num=<%=dto.getM_num()%>'">삭제</button>
+						<button class="btn btn-success" onclick="location.href='updateForm.jsp?m_num=<%=dto.getM_num()%>'"><i class="bi bi-pencil-square"></i></button>
+						<button class="btn btn-danger" onclick="location.href='deleteForm.jsp?m_num=<%=dto.getM_num()%>'"><i class="bi bi-trash-fill"></i></button>
 					</td>
 				</tr>
 			<%}

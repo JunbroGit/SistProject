@@ -15,13 +15,13 @@
 <body>
 <div style="margin: 200px 200px;">
 	<form action="deleteMember.jsp">
+	<input type="hidden" name="m_num" value="<%=m_num%>">
 		<table class="table table-bordered" style="width: 300px;">
 			<caption align="top">삭제비밀번호 입력</caption>
 			<tr>
 				<td>
 					비밀번호를 입력해 주세요
 					<input type="password" class="form-control" name="m_pass" required="required" style="width: 150px;">
-					<input type="hidden" name="m_num" value="<%=m_num%>">
 					
 					<br><br>
 					<button type="submit" class="btn btn-danger">삭제</button>
