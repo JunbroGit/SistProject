@@ -148,7 +148,6 @@ public class SimpleAnswerDao {
 		}finally {
 			db.dbClose(pstmt, conn);
 		}
-		
 	}
 	
 }

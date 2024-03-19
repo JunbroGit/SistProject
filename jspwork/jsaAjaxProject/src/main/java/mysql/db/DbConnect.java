@@ -29,7 +29,7 @@ public class DbConnect {
 		Connection conn=null;
 		
 		try {
-			conn=DriverManager.getConnection(MYSQL_URL, "junbro", "1234");
+			conn=DriverManager.getConnection(MYSQL_URL, "angel", "a1234");
 			System.out.println("MYSQL계정연결성공");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
