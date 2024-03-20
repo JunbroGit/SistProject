@@ -15,7 +15,7 @@
 	<b>이름: <%=name %></b>
 	<b>연락처: <%=hp %></b>
 
-	<%!
+	<%! 
 		String name="홍길동";
 		String hp="010-111-2222";
 		int age=22;

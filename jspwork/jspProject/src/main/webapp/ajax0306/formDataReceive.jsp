@@ -6,7 +6,7 @@
 	String photo=request.getParameter("foodphoto");
 	String fname=request.getParameter("foodname");
 	String like1=request.getParameter("foodscore1");
-	String like2=request.getParameter("foodscore2");
+	String like2=request.getParameter("foodscore2"); 
 	String like3=request.getParameter("foodscore3");
 	
 	//총점..String==>int

@@ -17,4 +17,4 @@
 	System.out.println("hp:"+hp);
 %>
 </body>
-</html>
+</html> 

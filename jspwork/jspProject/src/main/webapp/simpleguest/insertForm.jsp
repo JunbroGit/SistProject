@@ -11,7 +11,7 @@
 </head>
 <body>
 <div style="margin: 50px 100px;">
-	<form action="insertAction.jsp" method="post">
+	<form action="insertAction.jsp" method="post"> 
 		<table class="table table-bordered" style="width: 550px;">
 			<caption align="top"><b>간단 방명록</b></caption>
 			<tr>

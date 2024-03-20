@@ -9,7 +9,7 @@
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 <title>Insert title here</title>
 </head>
-<body>
+<body> 
 	<form action="uploadProc2.jsp" method="post" enctype="multipart/form-data">
 		<table class="table table-bordered" style="width: 400px;">
 			<caption align="top">이미지 여러개 업로드</caption>

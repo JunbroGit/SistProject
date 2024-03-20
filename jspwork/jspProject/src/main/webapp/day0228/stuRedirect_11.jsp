@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Gaegu&family=Nanum+Myeongjo&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 <title>Insert title here</title>
-</head>
+</head> 
 <body>
 	<h3 class="alert alert-danger">여기는 리다이렉트(stuRedirect_11.jsp)파일이에유</h3>
 	

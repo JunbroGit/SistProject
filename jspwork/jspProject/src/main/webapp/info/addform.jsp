@@ -9,7 +9,7 @@
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 <title>Insert title here</title>
 </head>
-<body>
+<body> 
 <div style="margin: 50px 100px">
 	<form action="addaction.jsp" method="post">
 		<table class="table table-bordered" style="width: 350px;">

@@ -9,7 +9,7 @@
     pageEncoding="UTF-8"%>
 <%
 	DbConnect db=new DbConnect();
-	Connection conn=db.getConnection();
+	Connection conn=db.getConnection(); 
 	Statement stmt=null;
 	ResultSet rs=null;
 	

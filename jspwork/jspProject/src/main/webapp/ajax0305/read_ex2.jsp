@@ -12,6 +12,6 @@
 	ob.put("name", name);
 	ob.put("price", price);
 	ob.put("color", color);
-%>
+%> 
 
 <%=ob.toString()%>

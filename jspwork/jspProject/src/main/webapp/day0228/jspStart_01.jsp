@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Gaegu&family=Nanum+Myeongjo&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 <title>Insert title here</title>
-</head>
+</head> 
 <body>
 	<h4>Jsp는 HTML5구조에 자바코드를 사용할 수 있는 서버언어이다</h4>
 	<h4>Seevlet은 확장자가 java이며 자바클래스 구조에 <br>html,css,javascipt도 사용가능한 서버언어이다</h4>

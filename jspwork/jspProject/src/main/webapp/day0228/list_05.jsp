@@ -15,7 +15,7 @@
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 <title>Insert title here</title>
 <style type="text/css">
-	.mainimg{
+	.mainimg{ 
 		width: 120px;
 		height: 160px;
 		border: 1px solid gray;

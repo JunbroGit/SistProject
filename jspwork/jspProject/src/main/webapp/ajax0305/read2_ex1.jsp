@@ -7,4 +7,4 @@
 	System.out.println("name: "+name);
 	System.out.println("hp: "+hp);
 %>
-<name><%=name %></name>
+<name><%=name %></name> 

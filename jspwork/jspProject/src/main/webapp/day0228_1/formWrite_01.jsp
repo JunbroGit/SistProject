@@ -9,7 +9,7 @@
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 <title>Insert title here</title>
 </head>
-<body>
+<body> 
 <%
 	request.setCharacterEncoding("utf-8"); //한글깨짐방지
 

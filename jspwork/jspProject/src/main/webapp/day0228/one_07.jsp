@@ -13,7 +13,7 @@
   <h3>oneInclude_07.jsp를 include하기</h3>
   <%
   	request.setCharacterEncoding("utf-8");
-  %>
+  %> 
   
   <jsp:include page="oneInclude_07.jsp">
   	

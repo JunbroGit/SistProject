@@ -10,7 +10,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<div style="margin: 30px 50px;">
+<div style="margin: 30px 50px;"> 
 	<form action="addAction.jsp" method="post">
 		<table class="table table-bordered" style="width: 300px">
 			<caption align="top">팀회원 정보 추가</caption>

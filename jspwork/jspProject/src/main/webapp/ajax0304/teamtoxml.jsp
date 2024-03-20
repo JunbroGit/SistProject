@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.sql.SQLException"%>
 <%@page import="java.sql.ResultSet"%>

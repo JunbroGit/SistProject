@@ -14,7 +14,7 @@
 <%
 	String num=request.getParameter("num");
 	GuestDao dao=new GuestDao();
-	GuestDto dto=dao.getData(num);
+	GuestDto dto=dao.getData(num); 
 %>
 <body>
 <div style="margin: 50px 100px;">

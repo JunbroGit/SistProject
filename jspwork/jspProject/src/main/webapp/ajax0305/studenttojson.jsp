@@ -8,7 +8,7 @@
 <%
 	DbConnect db=new DbConnect();
 	Connection conn=db.getConnection();
-	PreparedStatement pstmt=null;
+	PreparedStatement pstmt=null; 
 	ResultSet rs=null;
 	
 	String sql="select * from student order by num";
