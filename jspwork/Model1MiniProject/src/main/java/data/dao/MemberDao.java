@@ -39,8 +39,7 @@ public class MemberDao {
 		return isid;
 	}
 	
-	public void insertMember(MemberDto dto)
-	{
+	public void insertMember(MemberDto dto) {
 		Connection conn=db.getConnection();
 		PreparedStatement pstmt=null;
 		
@@ -63,6 +62,40 @@ public class MemberDao {
 		}finally {
 			db.dbClose(pstmt, conn);
 		}
+	}
+	
+	public MemberDto getData(String num,String name) {
+		MemberDto dto=new MemberDto();
 		
+		Connection conn=db.getConnection();
+		PreparedStatement pstmt=null;
+		ResultSet rs=null;
+		
+		String sql="select * from member where num=? and name=?";
+		
+		try {
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, num);
+			pstmt.setString(2, name);
+			rs=pstmt.executeQuery();
+			
+			if(rs.next())
+			{
+				dto.setNum(rs.getString("num"));
+				dto.setName(rs.getString("name"));
+				dto.setId(rs.getString("id"));
+				dto.setPass(rs.getString("pass"));
+				dto.setHp(rs.getString("hp"));
+				dto.setAddr(rs.getString("Addr"));
+				dto.setEmail(rs.getString("email"));
+				dto.setGaipday(rs.getTimestamp("gaipday"));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			db.dbClose(rs, pstmt, conn);
+		}
+		return dto;
 	}
 }

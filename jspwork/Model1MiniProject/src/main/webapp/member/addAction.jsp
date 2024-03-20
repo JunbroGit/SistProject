@@ -21,7 +21,8 @@
 	dto.setEmail(email);
 	dao.insertMember(dto);
 	
-	//일단은 리스트..가입성공페이지로 바꿀예정
+	String name=dto.getName();
+	
 	response.sendRedirect("../index.jsp?main=member/gaipSuccess.jsp");
 %>
 </body>

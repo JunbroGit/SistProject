@@ -1,3 +1,5 @@
+<%@page import="data.dto.MemberDto"%>
+<%@page import="data.dao.MemberDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -11,10 +13,16 @@
 </head>
 <%
 	String root=request.getContextPath();
+	String num=request.getParameter("num");
+	String name=request.getParameter("name");
+	
+	MemberDao dao=new MemberDao();
+	MemberDto dto=dao.getData(num,name);
 %>
 <body>
-<div>
-	<img src="<%=root%>/image/totoro/토토로배경4.jpg">
+<div style="margin: 80px 100px;">
+	<img src="<%=root%>/image/totoro/토토로배경4.jpg" style="width: 400px;"><br>
+	<b style="font-size: 2em;"><%=dto.getName() %>님 회원이 되신걸 환영합니다 :)</b>
 </div>
 </body>
 </html>
