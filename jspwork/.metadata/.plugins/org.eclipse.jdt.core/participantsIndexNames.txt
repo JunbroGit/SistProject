@@ -39,6 +39,8 @@ C:\sist\work\jspwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\32379
 \jsaAjaxProject\src\main\java
 C:\sist\work\jspwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2488825985.index
 \jspProject\src\main\java
+C:\sist\work\jspwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1276309435.index
+\Model1MiniProject\src\main\java
 C:\sist\work\jspwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1566573762.index
 \jspProject\src\main\java
 C:\sist\work\jspwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2518374064.index

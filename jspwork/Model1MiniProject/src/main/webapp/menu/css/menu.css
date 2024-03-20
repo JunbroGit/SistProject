@@ -47,7 +47,7 @@ ol, ul {
 
 /* HEADER */
 #wrap > header {
-	background-color: #333;
+	background-color: forestgreen;
 	padding-bottom: 20px;
 }
 .logo {
@@ -142,7 +142,7 @@ ul.sub-menu > li > a:hover {
 }
 
 ul.sub-menu > li:first-child {
-	border-top: 3px solid #23dbdb;
+	border-top: 3px solid #ff8040;
 }
 
 ul.sub-menu ul.sub-menu > li:first-child {
