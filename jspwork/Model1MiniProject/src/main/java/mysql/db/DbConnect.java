@@ -41,7 +41,7 @@ public class DbConnect {
 		return conn;
 	}
 	
-	//close 총 4개 오버로딩
+	//close 珥� 4媛� �삤踰꾨줈�뵫
 	public void dbClose(ResultSet rs,Statement stmt,Connection conn)
 	{
 		 
