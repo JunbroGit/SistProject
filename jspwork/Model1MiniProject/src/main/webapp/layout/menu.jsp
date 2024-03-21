@@ -45,11 +45,12 @@
 							<li><a href="#">이미지게시판</a></li>
 						</ul>
 					</li>
-					<li><a href="#">로그인</a>
+					<li><a href="#">회원</a>
 						<ul class="sub-menu">
+							<li><a href="index.jsp?main=login/loginMain.jsp">로그인</a></li>
 							<li><a href="index.jsp?main=member/addForm.jsp">회원가입</a></li>
-							<li><a href="#">회원목록</a></li>
-							<li><a href="#">마이페이지</a></li>
+							<li><a href="index.jsp?main=member/memberList.jsp">회원목록</a></li>
+							<li><a href="index.jsp?main=member/myPage.jsp">마이페이지</a></li>
 						</ul>
 					</li>
 					<li class="parent">

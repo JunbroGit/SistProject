@@ -12,17 +12,16 @@
 <title>Insert title here</title>
 </head>
 <%
-	String root=request.getContextPath();
-	String num=request.getParameter("num");
-	String name=request.getParameter("name");
-	
+	String id=request.getParameter("id");
 	MemberDao dao=new MemberDao();
-	MemberDto dto=dao.getData(num,name);
+	String name=dao.getName(id);
 %>
 <body>
 <div style="margin: 80px 100px;">
-	<img src="<%=root%>/image/totoro/토토로배경4.jpg" style="width: 400px;"><br>
-	<b style="font-size: 2em;"><%=dto.getName() %>님 회원이 되신걸 환영합니다 :)</b>
+	<img src="image/totoro/토토로배경4.jpg" style="width: 400px;"><br>
+	<b style="font-size: 2em;"><%=name %>님 회원이 되신걸 환영합니다 :)</b><br>
+	<button type="button" class="btn btn-success" onclick="location.href='index.jsp?main=login/loginMain.jsp'">로그인</button>
+	<button type="button" class="btn btn-success" onclick="location.href='index.jsp?main=member/myPage.jsp'">마이페이지</button>
 </div>
 </body>
 </html>
