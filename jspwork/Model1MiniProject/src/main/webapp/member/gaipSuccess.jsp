@@ -31,7 +31,7 @@
 	<img src="image/totoro/토토로배경4.jpg" style="width: 400px;"><br>
 	<b style="font-size: 2em;"><%=name %>님 회원이 되신걸 환영합니다 :)</b><br>
 	<button type="button" class="btn btn-success" onclick="location.href='index.jsp?main=login/loginMain.jsp'">로그인</button>
-	<button type="button" class="btn btn-success" onclick="location.href='index.jsp?main=member/myPage.jsp'">마이페이지</button>
+	<button type="button" class="btn btn-success" onclick="location.href='index.jsp'">메인</button>
 </div>
 </body>
 </html>

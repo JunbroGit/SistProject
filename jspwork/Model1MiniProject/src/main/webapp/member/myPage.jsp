@@ -60,7 +60,7 @@
 					</td>
 					<td style="width: 300px;">회원명: <%=dto.getName() %></td>	
 					<td rowspan="6" align="center" valign="middle" style="width: 100px;">
-						<button type="button" class="btn btn-outline-success">수정</button><br><br>
+						<button type="button" class="btn btn-outline-success" onclick="location.href='index.jsp?main=member/updatePassForm.jsp?num=<%=dto.getNum()%>'">수정</button><br><br>
 						<button type="button" class="btn btn-outline-danger" onclick="delfunc('<%=dto.getNum()%>')">탈퇴</button>
 					</td>
 				</tr>

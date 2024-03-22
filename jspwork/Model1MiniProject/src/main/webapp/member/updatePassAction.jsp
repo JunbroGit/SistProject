@@ -16,23 +16,11 @@
 	String pass=request.getParameter("pass");
 	
 	MemberDao dao=new MemberDao();
+	boolean check=dao.isEqualPass(num, pass);
 	
-	boolean b=dao.isEqualPass(num, pass);
-	
-	if(b){
-		dao.deleteMember(num);
-		
-		//세션삭제
-		session.removeAttribute("loginOk");
-		session.removeAttribute("myId");
-		session.removeAttribute("saveOk");
-		%>
-		<script type="text/javascript">
-			alert("잘 가유..")
-			location.href="../index.jsp";
-		</script>
-	<%}else{
-		%>
+	if(check){
+		response.sendRedirect("../index.jsp?main=member/updateForm.jsp?num="+num);
+	}else{%> 
 		<script type="text/javascript">
 			alert("비밀번호가 맞지않아유");
 			history.back();

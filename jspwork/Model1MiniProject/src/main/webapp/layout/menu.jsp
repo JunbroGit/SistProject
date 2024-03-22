@@ -62,7 +62,7 @@
 					<li class="parent">
 						<a href="#">방명록</a>
 						<ul class="sub-menu">
-							<li><a href="#">회원방명록</a></li>
+							<li><a href="index.jsp?main=memberguest/guestList.jsp">회원방명록</a></li>
 							<li><a href="#">비회원방명록</a></li>
 						</ul>
 					</li>
