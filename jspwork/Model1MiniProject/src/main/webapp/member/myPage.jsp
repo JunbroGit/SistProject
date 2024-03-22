@@ -42,16 +42,21 @@
 	MemberDao dao=new MemberDao();
 	List<MemberDto> list=dao.getAllMembers();
 	SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
+	
+	String loginOk=(String)session.getAttribute("loginOk");	
+	String myId=(String)session.getAttribute("myId");
 %>
 <body>
 <div style="margin: 80px 100px; width: 700px;">
 	<table class="table table-bordered">
 		<%
 			for(MemberDto dto:list)
-			{%>
+			{
+				if(loginOk!=null && myId.equals(dto.getId())){
+			%>
 				<tr>
 					<td rowspan="6" align="center" valign="middle">
-						<img src="image/totoro/고양이버스1.gif" id="mainimg">
+						<img src="image/totoro/고양이버스2.gif" id="mainimg">
 					</td>
 					<td style="width: 300px;">회원명: <%=dto.getName() %></td>	
 					<td rowspan="6" align="center" valign="middle" style="width: 100px;">
@@ -76,6 +81,8 @@
 				</tr>
 			<%}
 		%>
+		
+		<% }%>
 	</table>
 </div>
 

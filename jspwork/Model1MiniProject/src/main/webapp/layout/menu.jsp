@@ -13,13 +13,14 @@
 <script type="text/javascript" src="menu/js/function.js"></script>
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 <title>Insert title here</title>
-<style type="text/css">
-
-</style>
 </head>
 <%
 	//프로젝트 경로
 	String root=request.getContextPath();
+
+	String loginOk=(String)session.getAttribute("loginOk");	
+	String myId=(String)session.getAttribute("myId");
+	
 %>
 <body>
 	<!-- <a href="<%=root%>/">메인</a>&nbsp;&nbsp;&nbsp;
@@ -47,9 +48,14 @@
 					</li>
 					<li><a href="#">회원</a>
 						<ul class="sub-menu">
-							<li><a href="index.jsp?main=login/loginMain.jsp">로그인</a></li>
 							<li><a href="index.jsp?main=member/addForm.jsp">회원가입</a></li>
-							<li><a href="index.jsp?main=member/memberList.jsp">회원목록</a></li>
+							
+							<%
+								if(loginOk!=null && myId.equals("totoro")){%>
+									<li><a href="index.jsp?main=member/memberList.jsp">회원목록</a></li>
+								<%}
+							%>
+							
 							<li><a href="index.jsp?main=member/myPage.jsp">마이페이지</a></li>
 						</ul>
 					</li>
