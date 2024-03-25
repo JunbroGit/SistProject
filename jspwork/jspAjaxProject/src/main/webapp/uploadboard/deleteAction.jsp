@@ -35,9 +35,9 @@
 		if(file.exists()) //파일이 존재하면
 			file.delete(); //파일을 삭제
 		
-		dao.deleteUploadBoard(num);
-		
-		response.sendRedirect("boardList.jsp");
+			dao.deleteUploadBoard(num);
+			
+			response.sendRedirect("boardList.jsp");
 	}else{
 		%>
 		<script type="text/javascript">
