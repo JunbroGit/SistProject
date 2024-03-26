@@ -122,8 +122,11 @@ public class GuestDao {
 			
 			if (rs.next()) {
 	            dto.setNum(rs.getString("num"));
+	            dto.setMyid(rs.getString("myid"));
 	            dto.setContent(rs.getString("content"));
 	            dto.setPhotoname(rs.getString("photoname"));
+	            dto.setChu(rs.getInt("chu"));
+	            dto.setWriteday(rs.getTimestamp("writeday"));
 	        }
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -132,6 +135,9 @@ public class GuestDao {
 			db.dbClose(rs, pstmt, conn);
 		}
 		
+
+		
+
 		return dto;
 	}
 	
