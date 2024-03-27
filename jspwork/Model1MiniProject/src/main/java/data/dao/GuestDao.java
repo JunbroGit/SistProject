@@ -134,10 +134,6 @@ public class GuestDao {
 		}finally {
 			db.dbClose(rs, pstmt, conn);
 		}
-		
-
-		
-
 		return dto;
 	}
 	
