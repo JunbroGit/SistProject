@@ -41,7 +41,7 @@ public class DbConnect {
 		return conn;
 	}
 	
-	//close 珥� 4媛� �삤踰꾨줈�뵫
+	//close �룯占� 4揶쏉옙 占쎌궎甕곌쑬以덌옙逾�
 	public void dbClose(ResultSet rs,Statement stmt,Connection conn)
 	{
 		 
