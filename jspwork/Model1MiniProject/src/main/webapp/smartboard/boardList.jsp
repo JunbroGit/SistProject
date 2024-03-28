@@ -54,11 +54,11 @@
 					n+=$(this).val()+",";
 				});
 				
-				//마지막 컴마 제가
+				//마지막 컴마 제거
 				n=n.substring(0,n.length-1);
-				consol.log(n);
+				console.log(n);
 				
-				location.href="smartboard/alldelete.jsp?num"+n;
+				location.href="smartboard/allDelete.jsp?nums="+n;
 			}
 		});
 	});
@@ -133,6 +133,14 @@
 				<tr>
 					<td colspan="5" align="center">
 						<h6><b>등록된 게시글이 없슈</b></h6>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="5">
+						<span style="float: right;">
+							<button type="button" class="btn btn-danger btn-sm" id="btndel"><i class="bi bi-x-circle"></i>삭제</button>&nbsp;
+							<button type="button" class="btn btn-success btn-sm" onclick="location.href='index.jsp?main=smartboard/smartForm.jsp'"><i class="bi bi-pencil"></i>글쓰기</button><br>
+						</span>
 					</td>
 				</tr>
 			<%}else{
