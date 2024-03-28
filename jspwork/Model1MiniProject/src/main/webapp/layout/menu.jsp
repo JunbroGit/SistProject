@@ -43,7 +43,7 @@
 						<ul class="sub-menu">
 							<li><a href="#">회원게시판</a></li>
 							<li><a href="#">숲게시판</a></li>
-							<li><a href="#">이미지게시판</a></li>
+							<li><a href="index.jsp?main=smartboard/boardList.jsp">스마트게시판</a></li>
 						</ul>
 					</li>
 					<li><a href="#">회원</a>
