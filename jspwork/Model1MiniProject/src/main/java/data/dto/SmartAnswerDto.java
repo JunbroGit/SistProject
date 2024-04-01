@@ -9,7 +9,7 @@ public class SmartAnswerDto {
 	private String nickname;
 	private String content;
 	private Timestamp writeday;
-	
+
 	public String getIdx() {
 		return idx;
 	}

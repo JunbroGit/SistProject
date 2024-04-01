@@ -66,7 +66,18 @@
 							<li><a href="#">비회원방명록</a></li>
 						</ul>
 					</li>
-					<li><a href="#">About Forest</a></li>
+					<li class="parent">
+						<a href="#">Shop</a>
+						<ul class="sub-menu">
+							<%
+								if(loginOk!=null && myId.equals("totoro")){%>
+									<li><a href="index.jsp?main=shop/addForm.jsp">상품등록</a></li>
+								<%}else{%>
+									<li><a href="index.jsp?main=shop/shopList.jsp">상품목록</a></li>
+								<%}
+							%>
+						</ul>
+					</li>
 				</ul>
 			</nav>
 			<div class="clear"></div>
