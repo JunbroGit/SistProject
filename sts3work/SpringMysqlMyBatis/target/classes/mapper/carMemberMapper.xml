@@ -4,13 +4,21 @@
  <mapper namespace="spring.db.carmember.CarMemberDao">
    <!-- insert -->
    <insert id="insertOfCarMember" parameterType="cmdto">
-     insert into carmember (name,hp,addr,gaipday) values (#{name},#{hp},#{addr},now())
+   		insert into carmember (name,hp,addr,gaipday) values (#{name},#{hp},#{addr},now())
    </insert>
    <select id="totalCountOfMember" resultType="int">
 		select count(*) from carmember
-	</select>
+   </select>
    <select id="selectAllOfMember" resultType="cmdto">
 		select * from carmember order by num asc
-	</select>
-   
+   </select>
+   <select id="selectOneOfCarMember" parameterType="String" resultType="cmdto">
+	   	select * from carmember where num=#{num}
+   </select>
+   <update id="updateOfCarMember" parameterType="cmdto">
+   		update carmember set name=#{name},hp=#{hp},addr=#{addr} where num=#{num}
+   </update>
+   <delete id="deleteOfCarMember" parameterType="String">
+   		delete from carmember where num=#{num}
+   </delete>
  </mapper>

@@ -29,4 +29,22 @@ public class CarMemberDao implements CarMemberDaoInter {
 		// TODO Auto-generated method stub
 		return session.selectList("selectAllOfMember");
 	}
+
+	@Override
+	public CarMemberDto getOneData(String num) {
+		// TODO Auto-generated method stub
+		return session.selectOne("selectOneOfCarMember", num);
+	}
+
+	@Override
+	public void updateCarMember(CarMemberDto dto) {
+		// TODO Auto-generated method stub
+		session.update("updateOfCarMember", dto);
+	}
+
+	@Override
+	public void deleteMember(String num) {
+		// TODO Auto-generated method stub
+		session.delete("deleteOfCarMember", num);
+	}
 }
