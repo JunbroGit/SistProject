@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<<<<<<< HEAD
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="java.lang.StrictMath"/>
     <fullyQualifiedTypeName name="test.Student"/>
@@ -32,3 +33,6 @@
     <fullyQualifiedTypeName name="mem_gaip.model.MemgaipDao"/>
     <fullyQualifiedTypeName name="mem_gaip.model.MemgaipDto"/>
 </qualifiedTypeNameHistroy>
+=======
+<qualifiedTypeNameHistroy/>
+>>>>>>> 2f32182e4b4bad3d0217dd61f4b340ef556cf143

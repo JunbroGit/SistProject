@@ -149,5 +149,13 @@ public class SimpleAnswerDao {
 			db.dbClose(pstmt, conn);
 		}
 	}
+<<<<<<< HEAD:jspwork/.metadata/.plugins/org.eclipse.core.resources/.history/1c/a0c1f90ccce4001e1731d7c375e9897b
 	
+=======
+
+<<<<<<< HEAD
+>>>>>>> 2f32182e4b4bad3d0217dd61f4b340ef556cf143:jspwork/jspProject/src/main/java/simpleguest/model/GuestDao.java
 }
+=======
+}
+>>>>>>> 5d1692f77e6cf40a0a83f743137a408426ce9f3f

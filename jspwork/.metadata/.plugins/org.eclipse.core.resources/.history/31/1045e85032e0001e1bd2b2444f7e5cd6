@@ -152,4 +152,33 @@ public class MyinfoDao {
 			db.dbClose(pstmt, conn);
 		}
 	}
+<<<<<<< HEAD:jspwork/.metadata/.plugins/org.eclipse.core.resources/.history/31/1045e85032e0001e1bd2b2444f7e5cd6
 }
+=======
+	
+	//삭제(시퀀스에 해당하는 db삭제)
+	public void deleteIntro(String num) {
+		
+		Connection conn=db.getConnection();
+		PreparedStatement pstmt=null;
+		
+		String sql="delete from intro where num=?";
+		
+		try {
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, num);
+			pstmt.execute();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			db.dbClose(pstmt, conn);
+		}
+	}
+<<<<<<< HEAD
+}
+=======
+}
+
+>>>>>>> 5d1692f77e6cf40a0a83f743137a408426ce9f3f
+>>>>>>> 2f32182e4b4bad3d0217dd61f4b340ef556cf143:jspwork/jspProject/src/main/java/intro/model/introDao.java

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 127.0.0.1 - - [07/Mar/2024:08:57:23 +0900] "GET / HTTP/1.1" 404 807
 0:0:0:0:0:0:0:1 - - [07/Mar/2024:08:57:23 +0900] "GET /jspProject/intro/addForm.jsp HTTP/1.1" 200 2636
 0:0:0:0:0:0:0:1 - - [07/Mar/2024:08:57:23 +0900] "GET /favicon.ico HTTP/1.1" 404 818
@@ -963,3 +964,32 @@
 0:0:0:0:0:0:0:1 - - [07/Mar/2024:16:59:27 +0900] "GET /jspProject/intro/detailPage.jsp?num=6 HTTP/1.1" 200 1625
 0:0:0:0:0:0:0:1 - - [07/Mar/2024:16:59:27 +0900] "GET /jspProject/intro/detailPage.jsp?num=6 HTTP/1.1" 200 1625
 0:0:0:0:0:0:0:1 - - [07/Mar/2024:16:59:28 +0900] "GET /jspProject/intro/updateForm.jsp?num=6 HTTP/1.1" 200 2779
+=======
+127.0.0.1 - - [07/Mar/2024:20:40:40 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [07/Mar/2024:20:40:42 +0900] "GET /jspProject/intro/addForm.jsp HTTP/1.1" 200 2636
+0:0:0:0:0:0:0:1 - - [07/Mar/2024:20:40:42 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+0:0:0:0:0:0:0:1 - - [07/Mar/2024:20:40:45 +0900] "GET /jspProject/intro/introList.jsp HTTP/1.1" 200 1730
+0:0:0:0:0:0:0:1 - - [07/Mar/2024:20:40:48 +0900] "GET /jspProject/intro/detailPage.jsp?num=1 HTTP/1.1" 200 1611
+0:0:0:0:0:0:0:1 - - [07/Mar/2024:20:40:51 +0900] "GET /jspProject/intro/updateForm.jsp?num=1 HTTP/1.1" 200 2779
+0:0:0:0:0:0:0:1 - - [07/Mar/2024:20:40:56 +0900] "POST /jspProject/intro/updateAction.jsp HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [07/Mar/2024:20:40:56 +0900] "GET /jspProject/intro/introList.jsp HTTP/1.1" 200 1730
+0:0:0:0:0:0:0:1 - - [07/Mar/2024:20:40:57 +0900] "GET /jspProject/intro/detailPage.jsp?num=1 HTTP/1.1" 200 1618
+0:0:0:0:0:0:0:1 - - [07/Mar/2024:20:41:00 +0900] "GET /jspProject/intro/introList.jsp HTTP/1.1" 200 1730
+0:0:0:0:0:0:0:1 - - [07/Mar/2024:20:41:02 +0900] "GET /jspProject/intro/detailPage.jsp?num=2 HTTP/1.1" 200 1605
+0:0:0:0:0:0:0:1 - - [07/Mar/2024:20:41:04 +0900] "GET /jspProject/intro/introList.jsp HTTP/1.1" 200 1730
+0:0:0:0:0:0:0:1 - - [07/Mar/2024:20:41:04 +0900] "GET /jspProject/intro/detailPage.jsp?num=2 HTTP/1.1" 200 1605
+0:0:0:0:0:0:0:1 - - [07/Mar/2024:20:41:05 +0900] "GET /jspProject/intro/updateForm.jsp?num=2 HTTP/1.1" 200 2779
+0:0:0:0:0:0:0:1 - - [07/Mar/2024:20:41:07 +0900] "GET /jspProject/intro/introList.jsp HTTP/1.1" 200 1730
+0:0:0:0:0:0:0:1 - - [07/Mar/2024:20:41:17 +0900] "GET /jspProject/ajaxMyWorld/myWorld.html HTTP/1.1" 200 4854
+0:0:0:0:0:0:0:1 - - [07/Mar/2024:20:41:17 +0900] "GET /jspProject/image/avata/b2.png HTTP/1.1" 200 8636
+0:0:0:0:0:0:0:1 - - [07/Mar/2024:20:41:17 +0900] "GET /jspProject/image/avata/b1.png HTTP/1.1" 200 10341
+0:0:0:0:0:0:0:1 - - [07/Mar/2024:20:41:17 +0900] "GET /jspProject/image/avata/b6.png HTTP/1.1" 200 9853
+0:0:0:0:0:0:0:1 - - [07/Mar/2024:20:41:17 +0900] "GET /jspProject/image/avata/b3.png HTTP/1.1" 200 7593
+0:0:0:0:0:0:0:1 - - [07/Mar/2024:20:41:17 +0900] "GET /jspProject/image/avata/b5.png HTTP/1.1" 200 9285
+0:0:0:0:0:0:0:1 - - [07/Mar/2024:20:41:17 +0900] "GET /jspProject/image/avata/b4.png HTTP/1.1" 200 7593
+0:0:0:0:0:0:0:1 - - [07/Mar/2024:20:41:17 +0900] "GET /jspProject/image/avata/b7.png HTTP/1.1" 200 9092
+0:0:0:0:0:0:0:1 - - [07/Mar/2024:20:41:17 +0900] "GET /jspProject/image/avata/b8.png HTTP/1.1" 200 16977
+0:0:0:0:0:0:0:1 - - [07/Mar/2024:20:41:17 +0900] "GET /jspProject/image/avata/b9.png HTTP/1.1" 200 17666
+0:0:0:0:0:0:0:1 - - [07/Mar/2024:20:41:17 +0900] "GET /jspProject/image/avata/b10.png HTTP/1.1" 200 17863
+0:0:0:0:0:0:0:1 - - [07/Mar/2024:20:41:17 +0900] "GET /jspProject/ajaxMyWorld/worldList.jsp HTTP/1.1" 200 146
+>>>>>>> 2f32182e4b4bad3d0217dd61f4b340ef556cf143

@@ -41,4 +41,12 @@
 		db.dbClose(rs, pstmt, conn);
 	}
 %>
+<<<<<<< HEAD
+<<<<<<< HEAD
 </data>
+=======
+</data>
+>>>>>>> 5d1692f77e6cf40a0a83f743137a408426ce9f3f
+=======
+</data>
+>>>>>>> 2f32182e4b4bad3d0217dd61f4b340ef556cf143

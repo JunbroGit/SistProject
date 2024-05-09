@@ -1,2 +1,6 @@
 eclipse.preferences.version=1
+<<<<<<< HEAD
 locationorg.eclipse.jst.server.tomcat.runtime.90=C\:/sist0103/util/apache-tomcat-9.0.86
+=======
+locationorg.eclipse.jst.server.tomcat.runtime.90=C\:/sist/utill/apache-tomcat-9.0.86
+>>>>>>> 2f32182e4b4bad3d0217dd61f4b340ef556cf143

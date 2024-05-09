@@ -24,8 +24,18 @@
 			String num=rs.getString("num");
 			String foodname=rs.getString("foodname");
 			String foodphoto=rs.getString("foodphoto");
+<<<<<<< HEAD
+<<<<<<< HEAD
+			int price=rs.getInt("price");
+			int cnt=rs.getInt("cnt");
+=======
 			String price=rs.getString("price");
 			String cnt=rs.getString("cnt");
+>>>>>>> 5d1692f77e6cf40a0a83f743137a408426ce9f3f
+=======
+			int price=rs.getInt("price");
+			int cnt=rs.getInt("cnt");
+>>>>>>> 2f32182e4b4bad3d0217dd61f4b340ef556cf143
 			%>
 			
 			<food num="<%=num %>">

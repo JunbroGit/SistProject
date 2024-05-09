@@ -26,6 +26,14 @@
 			int java=rs.getInt("java");
 			int spring=rs.getInt("spring");
 			
+<<<<<<< HEAD
+<<<<<<< HEAD
+			//num name photo java spring
+=======
+>>>>>>> 5d1692f77e6cf40a0a83f743137a408426ce9f3f
+=======
+			//num name photo java spring
+>>>>>>> 2f32182e4b4bad3d0217dd61f4b340ef556cf143
 			s+="{";
 			s+="\"num\":"+num+",\"name\":\""+name+"\",\"photo\":\""+photo+"\",\"java\":"+java+",\"spring\":\""+spring+"\"";
 			s+="},";

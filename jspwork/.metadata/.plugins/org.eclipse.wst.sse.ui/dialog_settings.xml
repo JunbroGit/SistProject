@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="contentassistsize">
+<<<<<<< HEAD
 		<item key="size.x" value="428"/>
 		<item key="size.y" value="250"/>
 	</section>
@@ -11,5 +12,7 @@
 		<item key="org.eclipse.wst.sse.ui.internal.quickoutline.QuickOutlinePopupDialogDIALOG_Y_ORIGIN" value="326"/>
 		<item key="org.eclipse.wst.sse.ui.internal.quickoutline.QuickOutlinePopupDialogDIALOG_USE_PERSISTED_SIZE" value="true"/>
 		<item key="org.eclipse.wst.sse.ui.internal.quickoutline.QuickOutlinePopupDialogDIALOG_USE_PERSISTED_LOCATION" value="true"/>
+=======
+>>>>>>> 2f32182e4b4bad3d0217dd61f4b340ef556cf143
 	</section>
 </section>

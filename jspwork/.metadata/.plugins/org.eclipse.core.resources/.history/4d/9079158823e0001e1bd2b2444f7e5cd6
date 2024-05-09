@@ -138,10 +138,20 @@ public class MyinfoDao {
 			pstmt=conn.prepareStatement(sql);
 			
 			pstmt.setString(1, dto.getName());
+<<<<<<< HEAD:jspwork/.metadata/.plugins/org.eclipse.core.resources/.history/4d/9079158823e0001e1bd2b2444f7e5cd6
 			pstmt.setString(2, dto.getHp());
 			pstmt.setString(3, dto.getBlood());
 			pstmt.setDate(4, dto.getBirth());
 			pstmt.setString(5, dto.getNum());
+=======
+<<<<<<< HEAD
+			pstmt.setString(2, dto.getName());
+			pstmt.setString(3, dto.getName());
+=======
+			pstmt.setString(2, dto.getAddr());
+			pstmt.setString(3, dto.getNum());
+>>>>>>> 5d1692f77e6cf40a0a83f743137a408426ce9f3f
+>>>>>>> 2f32182e4b4bad3d0217dd61f4b340ef556cf143:jspwork/jspProject/src/main/java/info/model/InfoDao.java
 			
 			pstmt.execute();
 		} catch (SQLException e) {
@@ -151,4 +161,8 @@ public class MyinfoDao {
 			db.dbClose(pstmt, conn);
 		}
 	}
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 5d1692f77e6cf40a0a83f743137a408426ce9f3f

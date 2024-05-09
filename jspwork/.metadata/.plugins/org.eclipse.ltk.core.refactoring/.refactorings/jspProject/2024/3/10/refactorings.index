@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 1709519739005	Delete element
 1709519774167	Delete element
 1709519786014	Delete element
@@ -19,3 +20,23 @@
 1709783345375	Rename type 'worldDao'
 1709783362182	Rename type 'worldDto'
 1709880596182	Copy file
+=======
+1709549496560	Delete element
+1709549514099	Delete element
+1709549520404	Delete element
+1709549626780	Delete element
+1709549815174	Delete element
+1709550229627	Delete element
+1709550336780	Delete element
+1709550339850	Delete element
+1709552729871	Delete element
+1709553047405	Delete element
+1709553123215	Delete element
+1709553125753	Delete element
+1709606905992	Delete element
+1709641825957	Delete element
+1709723227123	Delete element
+1709724034250	Rename resource 'addAction.jsp'
+1709724077956	Rename resource '123.jsp'
+1709810829735	Rename resource 'formData.html'
+>>>>>>> 2f32182e4b4bad3d0217dd61f4b340ef556cf143

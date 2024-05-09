@@ -50,7 +50,15 @@
 			<td><%=(dto.getHobby()==null||dto.getHobby().equals("no"))?"취미가 없어유":dto.getHobby() %></td>
 		</tr>	
 		<tr>
+<<<<<<< HEAD
+<<<<<<< HEAD
+			<th>성격</th>
+=======
 			<th>더 하고싶은 말</th>
+>>>>>>> 5d1692f77e6cf40a0a83f743137a408426ce9f3f
+=======
+			<th>성격</th>
+>>>>>>> 2f32182e4b4bad3d0217dd61f4b340ef556cf143
 			<td><%=dto.getMemo() %></td>
 		</tr>
 		

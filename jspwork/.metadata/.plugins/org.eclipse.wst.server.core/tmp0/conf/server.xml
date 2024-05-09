@@ -160,7 +160,19 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
+<<<<<<< HEAD
+<<<<<<<< HEAD:jspwork/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/conf/server.xml
       <Context docBase="C:\sist0103\work\jspwork\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\sist0103\work\jspwork\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\jspProject" path="/jspProject" reloadable="true" source="org.eclipse.jst.jee.server:jspProject"/><Context docBase="C:\sist0103\work\jspwork\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\jsaAjaxProject" path="/jsaAjaxProject" reloadable="true" source="org.eclipse.jst.jee.server:jsaAjaxProject"/></Host>
+========
+<<<<<<< HEAD
+      <Context docBase="jspProject" path="/jspProject" reloadable="true" source="org.eclipse.jst.jee.server:jspProject"/><Context docBase="jspAjaxProject" path="/jspAjaxProject" reloadable="true" source="org.eclipse.jst.jee.server:jspAjaxProject"/></Host>
+=======
+      <Context docBase="jspProject" path="/jspProject" reloadable="true" source="org.eclipse.jst.jee.server:jspProject"/><Context docBase="jsaAjaxProject" path="/jsaAjaxProject" reloadable="true" source="org.eclipse.jst.jee.server:jsaAjaxProject"/></Host>
+>>>>>>> 5d1692f77e6cf40a0a83f743137a408426ce9f3f
+>>>>>>>> 2f32182e4b4bad3d0217dd61f4b340ef556cf143:jspwork/Servers/Tomcat v9.0 Server at localhost-config/server.xml
+=======
+      <Context docBase="C:\sist\work\jspwork\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\sist\work\jspwork\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\jspProject" path="/jspProject" reloadable="true" source="org.eclipse.jst.jee.server:jspProject"/><Context docBase="C:\sist\work\jspwork\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\jspAjaxProject" path="/jspAjaxProject" reloadable="true" source="org.eclipse.jst.jee.server:jspAjaxProject"/></Host>
+>>>>>>> 2f32182e4b4bad3d0217dd61f4b340ef556cf143
     </Engine>
   </Service>
 </Server>

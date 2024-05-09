@@ -2,7 +2,10 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+<<<<<<< HEAD
 			<item value="C:\sist0103\work\jspwork"/>
+=======
+>>>>>>> 2f32182e4b4bad3d0217dd61f4b340ef556cf143
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -14,7 +17,10 @@
 		</list>
 	</section>
 	<section name="MavenProjectWizardArchetypePage">
+<<<<<<< HEAD
 		<item key="catalog" value="All Catalogs"/>
+=======
+>>>>>>> 2f32182e4b4bad3d0217dd61f4b340ef556cf143
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
 			<item value="[artifactId]-TRUNK"/>

@@ -58,7 +58,15 @@
 			</tr>
 			
 			<tr>
+<<<<<<< HEAD
+<<<<<<< HEAD
+				<th>성격</th>
+=======
 				<th>하고 싶은 말</th>
+>>>>>>> 5d1692f77e6cf40a0a83f743137a408426ce9f3f
+=======
+				<th>성격</th>
+>>>>>>> 2f32182e4b4bad3d0217dd61f4b340ef556cf143
 				<td>
 					<textarea name="memo" style="width: 500px; height: 100px;" placeholder="자유롭게 서술하세요:)" class="form-control"></textarea>
 				</td>
@@ -67,7 +75,15 @@
 			<tr>
 				<td colspan="2" align="center">
 					<button type="submit" class="btn btn-outline-success">서버로 전송</button>
+<<<<<<< HEAD
+<<<<<<< HEAD
+					<button type="button" class="btn btn-warning" onclick="location.href='introList.jsp'">목록</button>
+=======
 					<button type="button" class="btn btn-warning" onclick="location.href='infoList.jsp'">목록</button>
+>>>>>>> 5d1692f77e6cf40a0a83f743137a408426ce9f3f
+=======
+					<button type="button" class="btn btn-warning" onclick="location.href='introList.jsp'">목록</button>
+>>>>>>> 2f32182e4b4bad3d0217dd61f4b340ef556cf143
 				</td>
 			</tr>
 		</table>

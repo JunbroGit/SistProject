@@ -1,6 +1,7 @@
 <?xml version="1.0" ?>
 <SAVED_DATA>
 	<bookmarks>
+<<<<<<< HEAD
 		<jdbcDriver className="oracle.jdbc.driver.OracleDriver" name="Oracle JDBC driver" type="ORACLE" version="21.11.0.0.0">
 			<jar fileName="C:\sist0103\util\ojdbc11.jar" />
 		</jdbcDriver>
@@ -9,13 +10,27 @@
 		</jdbcDriver>
 		<jdbcDriver className="org.apache.derby.jdbc.EmbeddedDriver" name="Apache Derby Embedded JDBC Driver" type="DERBY" version="10.3.1.4 - (561794)">
 			<jar fileName="C:/Users/user/.p2/pool/plugins/com.quantum.derby_3.3.10/lib/derby.jar" />
+=======
+		<jdbcDriver className="oracle.jdbc.driver.OracleDriver" name="Oracle JDBC driver" type="ORACLE" version="23.3.0.23.09">
+			<jar fileName="C:\sist\utill\ojdbc11.jar" />
+		</jdbcDriver>
+		<jdbcDriver className="org.apache.derby.jdbc.EmbeddedDriver" name="org.apache.derby.jdbc.EmbeddedDriver" type="DERBY" version="">
+			<jar fileName="C:/Users/microsoft/.p2/pool/plugins/com.quantum.derby_3.3.10/lib/derby.jar" />
+		</jdbcDriver>
+		<jdbcDriver className="com.mysql.cj.jdbc.Driver" name="MySQL Connector/J" type="MYSQL" version="mysql-connector-j-8.3.0 (Revision: 805f872a57875f311cb82487efcfb070411a3fa0)">
+			<jar fileName="C:\sist\utill\mysql-connector-j-8.3.0.jar" />
+>>>>>>> 2f32182e4b4bad3d0217dd61f4b340ef556cf143
 		</jdbcDriver>
 		<bookmark>
 			<name>(Internal) Derby</name>
 			<username>QUANTUM</username>
 			<password />
 			<prompt>false</prompt>
+<<<<<<< HEAD
 			<connect>jdbc:derby:C:/Users/user/.p2/pool/plugins/com.quantum.derby_3.3.10/data/quantum</connect>
+=======
+			<connect>jdbc:derby:C:/Users/microsoft/.p2/pool/plugins/com.quantum.derby_3.3.10/data/quantum</connect>
+>>>>>>> 2f32182e4b4bad3d0217dd61f4b340ef556cf143
 			<autoCommit>true</autoCommit>
 			<autoCommitPreference>Always True</autoCommitPreference>
 			<autoCommitIgnoreView>false</autoCommitIgnoreView>
@@ -28,7 +43,11 @@
 			<type>DERBY</type>
 			<substituteVariables>false</substituteVariables>
 			<variablesRegexp>\$\{(.*?)\}</variablesRegexp>
+<<<<<<< HEAD
 			<driverLocation>C:/Users/user/.p2/pool/plugins/com.quantum.derby_3.3.10/lib/derby.jar</driverLocation>
+=======
+			<driverLocation>C:/Users/microsoft/.p2/pool/plugins/com.quantum.derby_3.3.10/lib/derby.jar</driverLocation>
+>>>>>>> 2f32182e4b4bad3d0217dd61f4b340ef556cf143
 			<Other_Schemas schemaRule="useAll" />
 			<quickList />
 			<queryList />
@@ -51,11 +70,16 @@
 			<type>ORACLE</type>
 			<substituteVariables>false</substituteVariables>
 			<variablesRegexp>\$\{(.*?)\}</variablesRegexp>
+<<<<<<< HEAD
 			<driverLocation>C:\sist0103\util\ojdbc11.jar</driverLocation>
+=======
+			<driverLocation>C:\sist\utill\ojdbc11.jar</driverLocation>
+>>>>>>> 2f32182e4b4bad3d0217dd61f4b340ef556cf143
 			<Other_Schemas schemaRule="useSelected">
 				<schema>JUNBRO</schema>
 			</Other_Schemas>
 			<quickList />
+<<<<<<< HEAD
 			<queryList>
 				<query>
 					<queryString>create table quizinfo(no number(5) primary key,
@@ -71,6 +95,14 @@ writeday date)</queryString>
 			<name>mysql_junbro</name>
 			<username>junbro</username>
 			<password>1234</password>
+=======
+			<queryList />
+		</bookmark>
+		<bookmark>
+			<name>mysql_angel</name>
+			<username>angel</username>
+			<password>a1234</password>
+>>>>>>> 2f32182e4b4bad3d0217dd61f4b340ef556cf143
 			<prompt>false</prompt>
 			<connect>jdbc:mysql://localhost:3306/coffee</connect>
 			<autoCommit>true</autoCommit>
@@ -85,24 +117,39 @@ writeday date)</queryString>
 			<type>MYSQL</type>
 			<substituteVariables>false</substituteVariables>
 			<variablesRegexp>\$\{(.*?)\}</variablesRegexp>
+<<<<<<< HEAD
 			<driverLocation>C:\sist0103\util\mysql-connector-j-8.3.0.jar</driverLocation>
+=======
+			<driverLocation>C:\sist\utill\mysql-connector-j-8.3.0.jar</driverLocation>
+>>>>>>> 2f32182e4b4bad3d0217dd61f4b340ef556cf143
 			<Other_Schemas schemaRule="useSelected">
 				<schema>coffee</schema>
 			</Other_Schemas>
 			<quickList />
 			<queryList>
 				<query>
+<<<<<<< HEAD
 					<queryString>insert into food (foodname,foodphoto,price,cnt) values(&quot;스튜&quot;,&quot;../image/음식이미지/4.jpg&quot;,&quot;7000&quot;,&quot;10&quot;)</queryString>
 				</query>
 				<query>
 					<queryString>insert into food (foodname,foodphoto,price,cnt) values(&quot;콘치즈&quot;,&quot;../image/음식이미지/5.jpg&quot;,&quot;7000&quot;,&quot;15&quot;)</queryString>
 				</query>
 				<query>
+=======
+>>>>>>> 2f32182e4b4bad3d0217dd61f4b340ef556cf143
 					<queryString>create table info(num smallint auto_increment primary key,
 name varchar(20),hp varchar(20),
 age smallint,photo varchar(100))</queryString>
 				</query>
 				<query>
+<<<<<<< HEAD
+=======
+					<queryString>create table student(num smallint auto_increment primary key,
+name varchar(20),photo varchar(30),
+java int,spring varchar(100))</queryString>
+				</query>
+				<query>
+>>>>>>> 2f32182e4b4bad3d0217dd61f4b340ef556cf143
 					<queryString>insert into info(name,hp,age,photo)values('여진구','010-111-5634',22,'../image/연예인이미지/1.jpg')</queryString>
 				</query>
 				<query>
@@ -118,11 +165,14 @@ age smallint,photo varchar(100))</queryString>
 					<queryString>insert into info(name,hp,age,photo)values('성준','010-555-1348',28,'../image/연예인이미지/16.jpg')</queryString>
 				</query>
 				<query>
+<<<<<<< HEAD
 					<queryString>create table student(num smallint auto_increment primary key,
 name varchar(20),photo varchar(30),
 java int,spring varchar(100))</queryString>
 				</query>
 				<query>
+=======
+>>>>>>> 2f32182e4b4bad3d0217dd61f4b340ef556cf143
 					<queryString>insert into student(name,photo,java,spring)values('강동원','../image/연예인이미지/9.jpg',88,96)</queryString>
 				</query>
 				<query>
@@ -157,6 +207,15 @@ price int,imagename varchar(100))</queryString>
 				<query>
 					<queryString>insert into jshop values(null,'원피스','ivory','85000','../image/쇼핑몰이미지/28.jpg')</queryString>
 				</query>
+<<<<<<< HEAD
+=======
+				<query>
+					<queryString>create table intro(num smallint auto_increment primary key,
+name varchar(20),age smallint,photo varchar(100),
+birthday varchar(20),hometown varchar(20),
+hobby varchar(100),memo varchar(100))</queryString>
+				</query>
+>>>>>>> 2f32182e4b4bad3d0217dd61f4b340ef556cf143
 			</queryList>
 		</bookmark>
 	</bookmarks>
