@@ -1,0 +1,11 @@
+package spring.db.member;
+
+public class MemberDao implements MemberDaoInter {
+
+	@Override
+	public int getIdCheck(String id) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}
