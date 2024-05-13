@@ -7,6 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css" />
 <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Gaegu&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR&display=swap" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 <title>Insert title here</title>
@@ -27,6 +28,18 @@
 			<td>
 				<b>${dto.writer }</b>
 				<span style="float: right;">조회: ${dto.readcount }</span>
+				<div>
+					<c:if test="${dto.photo!='no' }">
+						<c:forTokens var="f" items="${dto.photo }" delims=",">
+							<div>
+								<a href="download?clip=${f }">
+									<i class="bi bi-file-earmark-arrow-down"></i>
+									<span>${f }</span>
+								</a>
+							</div>
+						</c:forTokens>
+					</c:if>
+				</div>
 			</td>
 		</tr>
 		<tr>

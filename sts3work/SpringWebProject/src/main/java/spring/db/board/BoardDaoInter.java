@@ -11,4 +11,7 @@ public interface BoardDaoInter {
 	public List<BoardDto> getList(int start,int perpage);
 	public BoardDto getData(int num);
 	public void updateReadcount(int num);
+	public void updateBoard(BoardDto dto);
+	public void deleteBoard(int num);
+	public List<BoardDto> getPhotoLists();
 }
