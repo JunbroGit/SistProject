@@ -1,0 +1,21 @@
+#box{
+    background-color: #fcc542;
+    width: 800px;
+    height: 500px;
+    margin: auto;
+    color: antiquewhite;
+}
+
+#box h1{
+    text-align: center;
+    padding-top: 50px;
+}
+
+#box p{
+    text-align: center;
+}
+
+#box ul{
+    list-style: none;
+    padding-left: 100px;
+}
