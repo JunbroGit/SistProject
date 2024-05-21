@@ -15,7 +15,7 @@
     //dto를 json으로 변환
     JSONObject ob=new JSONObject();
     //날짜타입 문자열 지정
-    SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd hh:mm");
+    SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
     
     //json에 데이타 추가
     ob.put("num", dto.getNum());

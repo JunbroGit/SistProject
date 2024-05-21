@@ -7,8 +7,16 @@
 	</configSuffixes>
 	<enableImports><![CDATA[true]]></enableImports>
 	<configs>
+<<<<<<< HEAD
 	</configs>
 	<autoconfigs>
+=======
+		<config>src/main/resources/annoContext1.xml</config>
+	</configs>
+	<autoconfigs>
+		<config>src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml</config>
+		<config>src/main/webapp/WEB-INF/spring/root-context.xml</config>
+>>>>>>> sist
 	</autoconfigs>
 	<configSets>
 	</configSets>
