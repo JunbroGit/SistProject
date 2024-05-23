@@ -56,7 +56,8 @@ public class MyCarController {
 	}
 	
 	@PostMapping("/insert")
-	public String insert(@ModelAttribute MyCarDto dto,@RequestParam MultipartFile carupload,
+	public String insert(@ModelAttribute MyCarDto dto,
+			@RequestParam MultipartFile carupload,
 			HttpSession session) {
 		
 		String realPath=session.getServletContext().getRealPath("/save");

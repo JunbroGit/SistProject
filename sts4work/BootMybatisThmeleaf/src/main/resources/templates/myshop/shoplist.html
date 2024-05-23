@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http//www.thymeleaf.org/">
+<head>
+<meta charset="UTF-8">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css" />
+<link href="https://fonts.googleapis.com/css2?family=Dongle&family=Gaegu&family=Nanum+Myeongjo&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet"> 
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+<div align="center">
+  <h3>
+    <b>총 [[${totalCount}]]개의 상품이 있음</b>
+      <button type="button" class="btn btn-outline-info" onclick="location.href='addform'">상품추가</button>
+  </h3>
+	
+  <hr>
+  
+  <table class="table table-bordered" style="width: 600px;">
+    <tr class="table-light">
+      <th width="50">번호</th>
+      <th width="200">상품명</th>
+      <th width="80">가격</th>
+      <th width="80">등록일</th>
+    </tr>
+    
+    <!-- list반복문 -->
+    <tr th:each="dto,iter:${list}">
+      <td>
+         [[${dto.num}]]
+      </td>
+      
+      <td>
+        <a th:href="@{/detail(num=${dto.num})}">
+           <img th:src="@{|/photo/${dto.photo}|}" style="width: 40px;">
+           [[${dto.sangpum}]]
+         </a>
+      </td>
+      
+      <td>
+        <span th:text="${#numbers.formatInteger(dto.price,0,'COMMA')}"></span>
+      </td>
+      
+      <td>
+      	<span th:text="${#calendars.format(dto.writeday,'yyyy-MM-dd')}"></span>
+      </td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>
