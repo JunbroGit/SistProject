@@ -27,7 +27,7 @@
 	div.layout div.menu{
 	  position: absolute;
 	  top: 200px;
-	  left: 250px;
+	  left: 200px;
 	  height: 100px;
 	}
 	

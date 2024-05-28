@@ -13,6 +13,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>MemberList</h1>
+<h1>${mcount } 명의 회원이 있습니다</h1>
 </body>
 </html>
