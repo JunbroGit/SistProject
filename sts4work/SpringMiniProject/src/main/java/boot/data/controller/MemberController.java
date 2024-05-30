@@ -125,6 +125,9 @@ public class MemberController {
 			
 			service.updatePhoto(num, fileName); //db업데이트
 			
+			//세션의 사진변경
+			session.setAttribute("loginphoto", fileName);
+			
 		} catch (IllegalStateException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -134,4 +137,20 @@ public class MemberController {
 		}
 	}
 	
+	
+	//수정폼에 출력할 데이타 반환
+	@GetMapping("/member/updateform")
+	@ResponseBody
+	public MemberDto getData(String num)
+	{
+		return service.getDataByNum(num);
+	}
+	
+	//수정
+	@PostMapping("/member/update")
+	@ResponseBody
+	public void update(MemberDto dto)
+	{
+		service.updateMember(dto);
+	}
 }

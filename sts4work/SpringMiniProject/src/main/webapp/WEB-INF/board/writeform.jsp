@@ -13,26 +13,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<c:if test=""></c:if>
 
-<br><br>
-
-<table class="table table-bordered" style="width: 1000px;">
-  <tr>
-  	<th width="60">번호</th>
-  	<th width="460">제목</th>
-  	<th width="160">작성자</th>
-  	<th width="80">조회</th>
-  	<th width="250">등록일</th>
-  </tr>
-  
-  <c:if test="${totalCount==0 }">
-    <tr>
-      <td colspan="5" align="center">
-        <h3><b>등록된 글이 없습니다</b></h3>
-      </td>
-    </tr>
-  </c:if>
-</table>
 </body>
 </html>
