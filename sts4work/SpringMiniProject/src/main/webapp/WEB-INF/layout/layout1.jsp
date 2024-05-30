@@ -35,8 +35,8 @@
 	  position: absolute;
 	  top: 300px;
 	  left: 30px;
-	  height: 200px;
-	  width: 200px;
+	  height: 300px;
+	  width: 180px;
 	  border: 5px solid forestgreen;
 	  border-radius: 30px;
 	  pause: 30px 20px;

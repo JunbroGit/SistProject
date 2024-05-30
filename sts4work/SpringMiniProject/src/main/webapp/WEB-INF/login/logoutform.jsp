@@ -13,6 +13,14 @@
 <title>Insert title here</title>
 </head>
 <body>
+<c:set var="root" value="<%=request.getContextPath() %>"/>
 
+<div style="margin: 100px 200px;;">
+	<img alt="" src="${root }/image/토토로배경1.jpg" width="300" align="left" hspace="20">
+	<br><br>
+	<b>${name }님 로그인중</b>
+	<br><br><br>
+	<button type="button" class="btn btn-danger" style="width: 100px;" onclick="location.href='logoutprocess'">로그아웃</button>
+</div>
 </body>
 </html>

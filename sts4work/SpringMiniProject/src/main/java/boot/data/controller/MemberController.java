@@ -103,4 +103,35 @@ public class MemberController {
 		return "/member/memberinfo";
 	}
 	
+	//회원목록 삭제
+	@GetMapping("/member/delete")
+	@ResponseBody
+	public void deleteMember(String num)
+	{
+		service.deleteMember(num);
+	}
+	
+	@PostMapping("/member/updatephoto")
+	@ResponseBody
+	public void photoUpload(String num,MultipartFile photo,HttpSession session)
+	{
+		String path=session.getServletContext().getRealPath("/memberphoto");
+		
+		SimpleDateFormat sdf=new SimpleDateFormat("yyyyMMddHHmmss");
+		String fileName=sdf.format(new Date())+photo.getOriginalFilename();
+		
+		try {
+			photo.transferTo(new File(path+"\\"+fileName));
+			
+			service.updatePhoto(num, fileName); //db업데이트
+			
+		} catch (IllegalStateException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 }
