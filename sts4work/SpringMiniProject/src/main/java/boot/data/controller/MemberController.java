@@ -74,13 +74,16 @@ public class MemberController {
 	{
 		String path=session.getServletContext().getRealPath("/memberphoto");
 		
+		String myid=(String)session.getAttribute("myid");
+		String loginok=(String)session.getAttribute("loginok");
+		
 		SimpleDateFormat sdf=new SimpleDateFormat("yyyyMMddHHmmss");
 		String fileName=sdf.format(new Date())+myphoto.getOriginalFilename();
 		dto.setPhoto(fileName);
 		
 		try {
 			myphoto.transferTo(new File(path+"\\"+fileName));
-			
+			service.insertMember(dto);
 			
 		} catch (IllegalStateException e) {
 			// TODO Auto-generated catch block
@@ -90,8 +93,11 @@ public class MemberController {
 			e.printStackTrace();
 		}
 		
-		service.insertMember(dto);
-		return "redirect:list";
+		/*if(loginok==null || myid!=null)
+			return "/member/gaipsuccess";
+		else*/
+		    return "redirect:list";
+		
 	}
 	
 	//회원정보로 가기
@@ -137,7 +143,6 @@ public class MemberController {
 		}
 	}
 	
-	
 	//수정폼에 출력할 데이타 반환
 	@GetMapping("/member/updateform")
 	@ResponseBody
@@ -152,5 +157,18 @@ public class MemberController {
 	public void update(MemberDto dto)
 	{
 		service.updateMember(dto);
+	}
+	
+	
+	//탈퇴
+	@GetMapping("/member/deleteme")
+	@ResponseBody
+	public void deleteme(String num,HttpSession session)
+	{
+		service.deleteMember(num);
+		
+		session.removeAttribute("loginok");
+		session.removeAttribute("myid");
+		
 	}
 }
