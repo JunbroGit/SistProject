@@ -9,93 +9,279 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Gaegu&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 <title>Insert title here</title>
+<style type="text/css">
+  .day{
+     color: gray;
+     margin-left: 100px;
+     font-size: 0.9em;
+  }
+</style>
+
+<script type="text/javascript">
+   $(function(){
+	   
+	   num=$("#num").val(); //전역변수
+	   loginok="${sessionScope.loginok}";
+	   myid="${sessionScope.myid}";
+	   
+	   //alert(loginok+","+myid);
+	   
+	   list();
+	   
+	   $("#btnansweradd").click(function(){
+		    var content=$("#content").val();
+		    
+		    if(content.trim().length==0){
+		    	alert("댓글내용을 입력해주세요");
+		    	return; 
+		    }
+		    
+		    //입력하면 ajax로 insert처리
+		    $.ajax({
+		    	type:"post",
+		    	dataType:"html",
+		    	url:"ainsert",
+		    	data:{"num":num,"content":content},
+		    	success:function(res){
+		    		//alert("성공");
+		    		list();
+		    		
+		    		//입력값 초기화
+		    		$("#content").val("");
+		    		
+		    	}
+		    	
+		    })
+	   });
+	   
+	   
+	   
+	   
+	   //삭제
+	   $(document).on("click","i.adel",function(){
+		   
+		   var idx=$(this).attr("idx");
+		   //alert(idx);
+		   
+		   var a=confirm("해당 댓글을 삭제할까요?");
+		   if(a==true){
+			   
+			   $.ajax({
+				   type:"get",
+				   dataType:"html",
+				   url:"adelete",
+				   data:{"idx":idx},
+				   success:function(){
+					   alert("삭제완료!!!");
+					   list();
+				   }
+			   })
+		   }
+	   });
+	   
+	   
+	   
+	   //댓글 수정버튼 누르면 모달다이얼로그
+	   $(document).on("click","i.amod",function(){
+		   idx=$(this).attr("idx");
+		   //alert(idx);
+		   $.ajax({
+			   type:"get",
+			   dataType:"json",
+			   url:"adata",
+			   data:{"idx":idx},
+			   success:function(data){
+				   
+				   $("#ucontent").val(data.content);
+			   }
+		   });
+		   
+		   $("#myUpdateContentModal").modal("show");
+	   })
+	   
+	   //수정
+	   $(document).on("click","#btnupdateok",function(){
+		   
+		   var content=$("#ucontent").val();
+		   //alert(content+","+idx);
+		   
+		   $.ajax({
+			   type:"post",
+			   dataType:"html",
+			   url:"aupdate",
+			   data:{"idx":idx,"content":content},
+			   success:function(data){
+				   alert("수정성공!!!");
+				   list();
+			   }
+		   })
+		   
+	   });
+	   
+   })
+   
+   //댓글리스트
+   function list()
+   {
+	   num=$("#num").val(); //전역변수
+	   loginok="${sessionScope.loginok}";
+	   myid="${sessionScope.myid}";
+	   
+	   
+	   $.ajax({
+		   type:"get",
+		   dataType:"json",
+		   url:"alist",
+		   data:{"num":num},
+		   success:function(data){
+			   
+			   $("span.acount").text(data.length); //댓글갯수
+			   
+			   var s="";
+			   $.each(data,function(i,dto){
+				   
+				   s+="<b>"+dto.name+"</b>: "+dto.content;
+				   s+="<span class='day'>"+dto.writeday+"</span>";
+				   
+				   if(loginok=='yes' && myid==dto.myid){
+					   s+="<i class='bi bi-pencil-square amod' idx='"+dto.idx+"'></i>";
+					   s+="&nbsp";
+					   s+="<i class='bi bi-trash-fill adel' idx='"+dto.idx+"' ></i>";
+				   }
+				   
+				   s+="<br>";
+			   })
+			   
+			   $("div.alist").html(s);
+		   }
+	   })
+   }
+   
+   
+</script>
 </head>
 <body>
-<div style="margin: 100px 100px; width: 1000px;">
-<c:if test="${sessionScope.loginok!=null }">
-   <button type="button" class="btn btn-outline-success"
-   style="width: 100px; margin-left: 900px;"
-   onclick="location.href='form'">글쓰기</button>
-</c:if>
-<br><br>
-<table class="table table-bordered" >
-   <tr class="table-success">
-     <th width="60">번호</th>
-     <th width="460">제목</th>
-     <th width="160">작성자</th>
-     <th width="80">조회</th>
-     <th width="250">등록일</th>
-   </tr>
-   
-   <c:if test="${totalCount==0 }">
-      <tr height="50">
-        <td colspan="5" align="center">
-           <h5><b>등록된 글이 없습니다</b></h5>
+<div style="margin: 50px 100px;">
+   <table class="table table-bordered" style="width: 600px;">
+      <tr>
+         <td>
+            <h3><b>${dto.subject }</b>
+            <span style="color: gray; float: right; font-size: 12pt;">
+               <fmt:formatDate value="${dto.writeday }" pattern="yyyy-MM-dd HH:mm"/>
+            </span>
+            </h3>
+            <span>작성자:  ${dto.name }(${dto.myid })</span>
+            
+            
+            <c:if test="${dto.uploadfile!='no' }">
+             
+              <span style="float: right;">
+               <a href="download?clip=${dto.uploadfile }">
+               <i class="bi bi-box-arrow-down " style="font-size: 18pt; color: gray;"></i>
+                <b>${dto.uploadfile }</b>
+               </a>
+              </span>
+            </c:if>
+            
+         </td>
+      </tr>
+      
+      <tr>
+        <td>
+          <c:if test="${bupload==true }">
+             <h5>업로드된 파일이 이미지입니다</h5>
+             <img alt="" src="../boardphoto/${dto.uploadfile }" style="max-width: 400px;">
+          </c:if>
+          
+          <br><br>
+          <pre>
+             ${dto.content }
+          </pre>
+          <br>
+          <b>조회: ${dto.readcount }</b>&nbsp;&nbsp;
+          <b>댓글: <span class="acount"></sapn></b>
         </td>
       </tr>
-   </c:if>
-   
-   <c:if test="${totalCount>0 }">
-      <c:forEach  var="a" items="${list }">
-          <tr>
-            <td align="center">${no }</td>  
-            <c:set var="no" value="${no-1 }"/>
-            <td>
-               <a href="content?num=${a.num }&currentPage=${currentPage}" style="color: black;">
-                 ${a.subject }
-               </a>
-               <c:if test="${a.uploadfile!='no' }">
-                   <i class="bi bi-image"  style="color: gray;"></i>
-               </c:if>
-               
-            </td>
-            <td>${a.name }</td>
-            <td>${a.readcount }</td>
-            <td>
-              <fmt:formatDate value="${a.writeday }" pattern="yyyy-MM-dd"/>
-            </td>
-          </tr>
-      </c:forEach>
-   </c:if>
-</table>
+      
+      <tr>
+      <td>
+      
+        <div class="alist"></div>
+        
+        <input type="hidden" id="num" value="${dto.num }">
+        <c:if test="${sessionScope.loginok!=null }">
+           <div class="aform">
+             <div class="d-inline-flex">
+                <input type="text" class="form-control" style="width: 500px;"
+                placeholder="댓글을 입력하세요" id="content">&nbsp;
+                <button type="button" class="btn btn-info" style="width: 60px;"
+                id="btnansweradd">등록</button>
+             </div>
+           </div>
+        </c:if>
+        </td>
+      </tr>
+      
+      
+      
+      
+      
+      <!-- 버튼들 -->
+      <tr>
+        <td align="right">
+        
+         <c:if test="${sessionScope.loginok!=null }">
+           <button type="button" class="btn btn-outline-success" style="width: 80px;"
+           onclick="location.href='form'">글쓰기</button>
+         </c:if> 
+         
+         
+           <button type="button" class="btn btn-outline-success" style="width: 80px;"
+           onclick="location.href='list'">목록</button>
+           
+         <c:if test="${sessionScope.loginok!=null and sessionScope.myid==dto.myid}">
+           <button type="button" class="btn btn-outline-success" style="width: 80px;"
+           onclick="location.href='updateform?num=${dto.num}&currentPage=${currentPage }'">수정</button>
+         </c:if>  
+         
+         <c:if test="${sessionScope.loginok!=null and sessionScope.myid==dto.myid}">
+           <button type="button" class="btn btn-outline-success" style="width: 80px;"
+           onclick="location.href='delete?num=${dto.num}&currentPage=${currentPage }'">삭제</button>
+         </c:if>
+        </td>
+      </tr>
+   </table>
 </div>
-<!-- 페이징 -->
-<div style="margin: 100px 100px; width: 1000px; text-align: center;">
-  <ul class="pagination justify-content-center">
-     <!--  이전-->
-     <c:if test="${startPage>1 }">
-        <li class="page-item ">
-	   <a class="page-link" href="list?currentPage=${startPage-1 }" style="color: black;">이전</a>
-	  </li>
-     </c:if>
-     
-     <!--페이지번호  -->
-     <c:forEach var="pp"  begin="${startPage }"  end="${endPage }">
-       <c:if test="${currentPage==pp }">
-       	  <li class="page-item active">
-    		<a class="page-link" href="list?currentPage=${pp }">${pp }</a>
-    	  </li>
-       </c:if>
-       
-       <c:if test="${currentPage!=pp }">
-          <li class="page-item">
-    		<a class="page-link" href="list?currentPage=${pp }">${pp }</a>
-    		</li>
-       </c:if>
-     </c:forEach>
-     
-     
-     <!-- 다음 -->
-     <c:if test="${endPage<totalPage }">
-        <li class="page-item">
-    		<a  class="page-link" href="list?currentPage=${endPage+1 }"
-    		style="color: black;">다음</a>
-    	</li>
-     </c:if>
-  </ul>
+
+<!-- The 댓글 수정 Modal -->
+<div class="modal" id="myUpdateContentModal">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">댓글수정</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <input type="text" id="ucontent" class="form-control">
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal" id="btnupdateok">수정</button>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
 </div>
+
 
 
 </body>
